@@ -1,0 +1,21 @@
+{
+  "name": "zap_full",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bolid1/zap_full.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bolid1/zap_full/issues"
+  },
+  "dependencies": {
+    "underscore": "1.8.3"
+  }
+}
