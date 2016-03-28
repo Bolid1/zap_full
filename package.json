@@ -16,6 +16,8 @@
     "url": "https://github.com/Bolid1/zap_full/issues"
   },
   "dependencies": {
-    "underscore": "1.8.3"
+    "underscore": "*",
+    "mocha": "*",
+    "chai": "*"
   }
 }
