@@ -2,8 +2,9 @@ var
   _ = require('underscore'),
   utils = require('./../../lib/utils'),
   actions = require('./../../result/actions.json'),
-  should = require('chai').should(),
   template;
+
+require('chai').should();
 
 template = {
   _dump_version: 1,
@@ -148,13 +149,25 @@ describe('result', function () {
           props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current');
         });
 
+        it('Important check', function () {
+          props.important.should.to.be.a('boolean');
+          // @TODO: Change that
+          props.important.should.to.equal(true);
+        });
+
+        it('Hide check', function () {
+          props.hide.should.to.be.a('boolean');
+          props.hide.should.to.equal(false);
+        });
+
+        it('Fields must be empty', function () {
+          props.fields.should.deep.equal({});
+        });
+
         // @TODO:
-        template_keys = [
-          'important',
-          'hide',
-          'sample_result_fields',
-          'fields'
-        ];
+        //template_keys = [
+        //  'sample_result_fields'
+        //];
       });
     });
   });
