@@ -8,28 +8,28 @@ require('chai').should();
 
 template = {
   _dump_version: 1,
-  label: "Create Lead",
-  help_text: "Creates a new lead",
-  noun: "Lead",
+  label: 'Create Lead',
+  help_text: 'Creates a new lead',
+  noun: 'Lead',
   important: true,
   hide: false,
-  url: "https://{{account}}.amocrm.com/private/api/v2/json/leads/set/",
-  custom_fields_url: "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current",
+  url: 'https://{{account}}.amocrm.com/private/api/v2/json/leads/set/',
+  custom_fields_url: 'https://{{account}}.amocrm.com/private/api/v2/json/accounts/current',
   sample_result_fields: [
     {
-      type: "int",
-      key: "id",
-      label: "Unique lead identifier"
+      type: 'int',
+      key: 'id',
+      label: 'Unique lead identifier'
     },
     {
-      type: "unicode",
-      key: "subdomain",
-      label: "Account subdomain"
+      type: 'unicode',
+      key: 'subdomain',
+      label: 'Account subdomain'
     },
     {
-      type: "unicode",
-      key: "url",
-      label: "Url to see lead"
+      type: 'unicode',
+      key: 'url',
+      label: 'Url to see lead'
     }
   ],
   fields: {}
@@ -164,10 +164,46 @@ describe('result', function () {
           props.fields.should.deep.equal({});
         });
 
-        // @TODO:
-        //template_keys = [
-        //  'sample_result_fields'
-        //];
+        it('Check sample result fields', function () {
+          props.sample_result_fields.should.be.a('array');
+
+          var
+            fields_should = {
+              id: {
+                'type': 'int',
+                'key': 'id',
+                'label': 'Unique %s identifier'
+              },
+              subdomain: {
+                'type': 'unicode',
+                'key': 'subdomain',
+                'label': 'Account subdomain'
+              },
+              url: {
+                'type': 'unicode',
+                'key': 'url',
+                'label': 'Url to see lead'
+              }
+            };
+
+          if (_.indexOf(['task', 'note'], entity) !== -1) {
+            delete fields_should.url;
+          }
+
+          props.sample_result_fields.length.should.equal(_.keys(fields_should).length);
+          props.sample_result_fields.forEach(function (field) {
+            ['type', 'key', 'label'].forEach(function (property) {
+              field.should.have.property(property);
+            });
+            fields_should.should.have.property(field.key);
+
+            var test_field = fields_should[field.key];
+
+            ['type', 'key', 'label'].forEach(function (property) {
+              field[property].should.equal(test_field[property].replace('%s', entity));
+            });
+          });
+        });
       });
     });
   });
