@@ -1,6 +1,7 @@
 var
-  should = require('chai').should(),
   utils = require('./../../lib/utils');
+
+require('chai').should();
 
 describe('libs', function () {
   describe('string', function () {
@@ -10,6 +11,25 @@ describe('libs', function () {
       });
       it('Must do it job with spaces', function () {
         utils.string.capitalize('abc def').should.equal('Abc Def');
+      });
+    });
+  });
+  describe('object', function () {
+    describe('#clone', function () {
+      it('Must do it job', function () {
+        utils.objects.clone('abc').should.equal('abc');
+        utils.objects.clone({foo: {foo: 'bar'}}).should.deep.equal({foo: {foo: 'bar'}});
+      });
+      it('Must clone without links', function () {
+        var
+          test = {foo: {foo: 'bar'}},
+          result = utils.objects.clone(test);
+
+        result.should.deep.equal(test);
+        test.foo.foo = 'foo';
+        result.should.deep.not.equal(test);
+        test.foo = {bar: 'foo'};
+        result.should.deep.not.equal(test);
       });
     });
   });
