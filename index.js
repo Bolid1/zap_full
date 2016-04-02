@@ -1,7 +1,5 @@
 var
+  Config = require('./config'),
   Application = require('./lib/app');
 
-Application();
-// @TODO: Get application
-// @TODO: Build everything
-// @TODO: Test everything
+(new Application(Config)).init();
