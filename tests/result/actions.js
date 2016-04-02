@@ -121,7 +121,6 @@ describe('result', function () {
 
         it('Important check', function () {
           props.important.should.to.be.a('boolean');
-          // @TODO: Change that
           props.important.should.to.equal(_.indexOf(['lead_add', 'contact_add', 'contact_update'], key) !== -1);
         });
 
