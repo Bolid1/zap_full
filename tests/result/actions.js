@@ -79,19 +79,19 @@ describe('result', function () {
         });
 
         it('Help text must be valid', function () {
-          var label_must_be = '';
+          var help_text_must_be = '';
 
           switch (action) {
             case 'add':
-              label_must_be = 'Creates a new ';
+              help_text_must_be = 'Creates a new ';
               break;
             case 'update':
-              label_must_be = 'Updates a ';
+              help_text_must_be = 'Updates a ';
               break;
           }
-          label_must_be += entity;
+          help_text_must_be += entity;
 
-          props.help_text.should.equal(label_must_be);
+          props.help_text.should.equal(help_text_must_be);
         });
 
         it('Noun must be valid', function () {
@@ -116,7 +116,7 @@ describe('result', function () {
         });
 
         it('Custom fields url must be valid', function () {
-          props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current');
+          props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/');
         });
 
         it('Important check', function () {
