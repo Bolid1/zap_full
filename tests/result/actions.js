@@ -1,39 +1,9 @@
 var
   _ = require('underscore'),
   utils = require('./../../lib/utils'),
-  actions = require('./../../result/actions.json'),
-  template;
+  actions = require('./../../result/actions.json');
 
 require('chai').should();
-
-template = {
-  _dump_version: 1,
-  label: 'Create Lead',
-  help_text: 'Creates a new lead',
-  noun: 'Lead',
-  important: true,
-  hide: false,
-  url: 'https://{{account}}.amocrm.com/private/api/v2/json/leads/set/',
-  custom_fields_url: 'https://{{account}}.amocrm.com/private/api/v2/json/accounts/current',
-  sample_result_fields: [
-    {
-      type: 'int',
-      key: 'id',
-      label: 'Unique lead identifier'
-    },
-    {
-      type: 'unicode',
-      key: 'subdomain',
-      label: 'Account subdomain'
-    },
-    {
-      type: 'unicode',
-      key: 'url',
-      label: 'Url to see lead'
-    }
-  ],
-  fields: {}
-};
 
 describe('result', function () {
   describe('actions', function () {
@@ -182,7 +152,7 @@ describe('result', function () {
               url: {
                 'type': 'unicode',
                 'key': 'url',
-                'label': 'Url to see lead'
+                'label': 'Url to see %s'
               }
             };
 
