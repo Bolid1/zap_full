@@ -17,19 +17,19 @@ myConfig = {
       url: 'contacts',
       id: 1
     },
-    company: {
-      many: 'companies',
-      single: 'company',
-      api: 'contacts',
-      url: 'company',
-      id: 3
-    },
     lead: {
       many: 'leads',
       single: 'lead',
       api: 'leads',
       url: 'leads',
       id: 2
+    },
+    company: {
+      many: 'companies',
+      single: 'company',
+      api: 'contacts',
+      url: 'company',
+      id: 3
     },
     task: {
       many: 'tasks',
