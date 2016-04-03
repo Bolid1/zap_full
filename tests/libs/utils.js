@@ -32,5 +32,15 @@ describe('libs', function () {
         result.should.deep.not.equal(test);
       });
     });
+    describe('#filter', function () {
+      it('Must do it job', function () {
+        var object;
+        object = {foo: 'bar', bar: 'foo'};
+
+        utils.objects.filter(object, function (value, index) {
+          return index === 'foo';
+        }).should.deep.equal({foo: 'bar'});
+      });
+    });
   });
 });

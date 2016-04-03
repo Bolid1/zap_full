@@ -21,7 +21,7 @@ describe('result', function () {
         });
 
         it('action "' + action + '" must be in array', function () {
-          ['add', 'update'].indexOf(action).should.not.equal(-1);
+          action.should.equal('search');
         });
 
 
@@ -34,6 +34,9 @@ describe('result', function () {
           'hide',
           'url',
           'custom_fields_url',
+          'resource_url',
+          'action_pair_label',
+          'action_pair_key',
           'sample_result_fields',
           'fields'
         ];
@@ -63,35 +66,11 @@ describe('result', function () {
         });
 
         it('Label must be valid', function () {
-          var label_must_be = '';
-
-          switch (action) {
-            case 'add':
-              label_must_be = 'Create ';
-              break;
-            case 'update':
-              label_must_be = 'Update ';
-              break;
-          }
-          label_must_be += utils.string.capitalize(entity);
-
-          props.label.should.equal(label_must_be);
+          props.label.should.equal('Find ' + utils.string.capitalize(entity));
         });
 
         it('Help text must be valid', function () {
-          var label_must_be = '';
-
-          switch (action) {
-            case 'add':
-              label_must_be = 'Creates a new ';
-              break;
-            case 'update':
-              label_must_be = 'Updates a ';
-              break;
-          }
-          label_must_be += entity;
-
-          props.help_text.should.equal(label_must_be);
+          props.help_text.should.equal('Finds an existing ' + entity);
         });
 
         it('Noun must be valid', function () {
@@ -99,7 +78,7 @@ describe('result', function () {
         });
 
         it('Url must be valid', function () {
-          var valid_url = 'https://{{account}}.amocrm.com/private/api/v2/json/%s/set/';
+          var valid_url = 'https://{{account}}.amocrm.com/private/api/v2/json/%s/list/';
 
           switch (entity) {
             case 'contact':
@@ -116,12 +95,12 @@ describe('result', function () {
         });
 
         it('Custom fields url must be valid', function () {
-          props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current');
+          props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/');
         });
 
         it('Important check', function () {
           props.important.should.to.be.a('boolean');
-          props.important.should.to.equal(_.indexOf(['lead_add', 'contact_add', 'contact_update'], key) !== -1);
+          props.important.should.to.equal(_.indexOf(['lead', 'contact', 'company'], entity) !== -1);
         });
 
         it('Hide check', function () {
@@ -129,49 +108,88 @@ describe('result', function () {
           props.hide.should.to.equal(false);
         });
 
-        it('Fields must be empty', function () {
-          props.fields.should.deep.equal({});
+        it('Check fields', function () {
+          var test_fields = {
+            id: {
+              label: 'ID',
+              required: false,
+              help_text: 'Select an element with the specified ID (if this parameter is indicated, all other parameters will be ignored)',
+              placeholder: '123456',
+              default: null,
+              choices: null,
+              sort: null,
+              type_of: 'Integer',
+              list: true,
+              prefill: null
+            }
+          };
+
+          if (_.indexOf(['note', 'task'], entity) !== -1) {
+            test_fields = _.extend(test_fields, {
+              element_id: {
+                label: 'Element ID',
+                required: false,
+                help_text: 'Additional search filter option by lead/contact ID',
+                placeholder: '123456',
+                default: null,
+                choices: null,
+                sort: null,
+                type_of: 'Integer',
+                list: false,
+                prefill: null
+              },
+              type: {
+                label: 'Element Type',
+                required: entity === 'note',
+                help_text: 'Obtaining data only for contact or lead',
+                placeholder: '',
+                default: null,
+                choices: 'contact|Contact,lead|Lead',
+                sort: null,
+                type_of: 'Unicode',
+                list: false,
+                prefill: null
+              }
+            });
+          } else {
+            test_fields = _.extend(test_fields, {
+              query: {
+                label: 'Query',
+                required: false,
+                help_text: 'Searched element, by a text query (Performs search in such fields as e-mail, phone and others; does not perform search in notes and tasks)',
+                placeholder: '%s name',
+                default: null,
+                choices: null,
+                sort: null,
+                type_of: 'Unicode',
+                list: false,
+                prefill: null
+              }
+            });
+          }
+
+          _.each(test_fields, function (field) {
+            field.placeholder = field.placeholder.replace('%s', utils.string.capitalize(entity));
+          });
+          props.fields.should.deep.equal(test_fields);
         });
 
         it('Check sample result fields', function () {
           props.sample_result_fields.should.be.a('array');
+          props.sample_result_fields.length.should.equal(0);
+        });
 
-          var
-            fields_should = {
-              id: {
-                'type': 'int',
-                'key': 'id',
-                'label': 'Unique %s identifier'
-              },
-              subdomain: {
-                'type': 'unicode',
-                'key': 'subdomain',
-                'label': 'Account subdomain'
-              },
-              url: {
-                'type': 'unicode',
-                'key': 'url',
-                'label': 'Url to see %s'
-              }
-            };
 
-          if (_.indexOf(['task', 'note'], entity) !== -1) {
-            delete fields_should.url;
-          }
+        it('Resource url must like url', function () {
+          props.resource_url.should.equal(props.url + '?id={{id}}');
+        });
 
-          props.sample_result_fields.length.should.equal(_.keys(fields_should).length);
-          props.sample_result_fields.forEach(function (field) {
-            ['type', 'key', 'label'].forEach(function (property) {
-              field.should.have.property(property);
-            });
-            fields_should.should.have.property(field.key);
+        it('Action label must be like this', function () {
+          props.action_pair_label.should.equal('Find or Create ' + utils.string.capitalize(entity));
+        });
 
-            var test_field = fields_should[field.key];
-
-            ['type', 'key', 'label'].forEach(function (property) {
-              field[property].should.equal(test_field[property].replace('%s', entity));
-            });
-          });
+        it('Action key must be like this', function () {
+          props.action_pair_key.should.equal(entity + '_add');
         });
       });
     });

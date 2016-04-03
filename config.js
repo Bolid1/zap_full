@@ -1,4 +1,6 @@
 var
+  _ = require('underscore'),
+  utils = require('./lib/utils.js'),
   fs = require('fs'),
   myConfig;
 
@@ -7,7 +9,7 @@ myConfig = {
     root: __dirname,
     result: fs.realpathSync(__dirname + '/result')
   },
-  names: {
+  entities: {
     contact: {
       many: 'contacts',
       single: 'contact',
@@ -61,7 +63,26 @@ myConfig = {
       }
     },
     important: ['lead_add', 'contact_add', 'contact_update']
+  },
+  searches: {
+    entities: ['contact', 'lead', 'company', 'task', 'note'],
+    actions: {
+      search: {
+        names: {
+          label: 'Find %s',
+          help_text: 'Finds an existing %s',
+          pair_label: 'Find or Create %s'
+        }
+      }
+    },
+    important: ['contact_search', 'lead_search', 'company_search']
   }
 };
+
+['actions', 'searches'].forEach(function (key) {
+  myConfig[key].entities = utils.objects.filter(myConfig.entities, function (value, index) {
+    return _.indexOf(myConfig[key].entities, index) !== -1;
+  });
+});
 
 module.exports = myConfig;
