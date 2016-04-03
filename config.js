@@ -76,10 +76,54 @@ myConfig = {
       }
     },
     important: ['contact_search', 'lead_search', 'company_search']
+  },
+  triggers: {
+    entities: ['contact', 'lead', 'company'],
+    actions: {
+      add: {
+        names: {
+          label: 'New %s',
+          help_text: 'Triggers when a new %s is created'
+        }
+      },
+      delete: {
+        names: {
+          label: '%s Deleted',
+          help_text: 'Triggers when %s is deleted'
+        }
+      },
+      update: {
+        names: {
+          label: '%s Updated',
+          help_text: 'Triggers when %s is updated'
+        }
+      },
+      restore: {
+        names: {
+          label: '%s Restored',
+          help_text: 'Triggers when %s is restored'
+        }
+      },
+      status: {
+        only: ['lead'],
+        names: {
+          label: '%s Status Changed',
+          help_text: 'Triggers when %s status is changed'
+        }
+      },
+      responsible: {
+        only: ['lead'],
+        names: {
+          label: '%s Responsible User Changed',
+          help_text: 'Triggers when %s responsible user is changed'
+        }
+      }
+    },
+    important: ['add_lead', 'update_lead', 'status_lead']
   }
 };
 
-['actions', 'searches'].forEach(function (key) {
+['actions', 'searches', 'triggers'].forEach(function (key) {
   myConfig[key].entities = utils.objects.filter(myConfig.entities, function (value, index) {
     return _.indexOf(myConfig[key].entities, index) !== -1;
   });
