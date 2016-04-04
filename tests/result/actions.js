@@ -120,7 +120,7 @@ describe('result/actions', function () {
 
       it('Important check', function () {
         props.important.should.to.be.a('boolean');
-        props.important.should.to.equal(_.indexOf(['lead_add', 'contact_add', 'contact_update'], key) !== -1);
+        props.important.should.to.equal(_.indexOf(['lead_add', 'lead_update', 'contact_add', 'contact_update'], key) !== -1);
       });
 
       it('Hide check', function () {

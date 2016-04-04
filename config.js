@@ -62,7 +62,7 @@ myConfig = {
         }
       }
     },
-    important: ['lead_add', 'contact_add', 'contact_update']
+    important: ['lead_add', 'lead_update', 'contact_add', 'contact_update']
   },
   searches: {
     entities: ['contact', 'lead', 'company', 'task', 'note'],
