@@ -1,11 +1,26 @@
 var
   _ = require('underscore'),
   utils = require('./../../lib/utils'),
+  config = require('./../../config'),
   actions = require('./../../result/actions.json');
 
 require('chai').should();
 
+config = _.extend({}, config, config.actions);
 describe('result/actions', function () {
+  it('All keys must exist', function () {
+    _.keys(config.entities).forEach(function (entity) {
+      _.keys(config.actions).forEach(function (action) {
+        if (config.actions[action].only) {
+          if (_.indexOf(config.actions[action].only, entity) === -1) {
+            return;
+          }
+        }
+
+        actions.should.have.property([entity, action].join('_'));
+      });
+    });
+  });
   _.each(actions, function (props, key) {
     key = key.split('_');
     var

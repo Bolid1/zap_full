@@ -1,11 +1,26 @@
 var
   _ = require('underscore'),
   utils = require('./../../lib/utils'),
+  config = require('./../../config'),
   triggers = require('./../../result/triggers.json');
 
 require('chai').should();
-
+config = _.extend({}, config, config.triggers);
 describe('result/triggers', function () {
+  it('All keys must exist', function () {
+    triggers.should.have.property('auth');
+    _.keys(config.entities).forEach(function (entity) {
+      _.keys(config.actions).forEach(function (action) {
+        if (config.actions[action].only) {
+          if (_.indexOf(config.actions[action].only, entity) === -1) {
+            return;
+          }
+        }
+
+        triggers.should.have.property([action, entity].join('_'));
+      });
+    });
+  });
   _.each(triggers, function (props, key) {
     if (key === 'auth') {
       it('Check auth trigger', function () {
@@ -216,7 +231,7 @@ describe('result/triggers', function () {
 
       it('Hide check', function () {
         props.hide.should.to.be.a('boolean');
-        props.hide.should.to.equal(action === 'delete');
+        props.hide.should.to.equal(['delete', 'restore'].indexOf(action) !== -1);
       });
 
       it('Check fields', function () {
