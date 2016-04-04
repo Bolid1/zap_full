@@ -3,7 +3,7 @@ var
 
 require('chai').should();
 
-describe('libs', function () {
+describe('lib/utils', function () {
   describe('string', function () {
     describe('#capitalize', function () {
       it('Must do it job', function () {
