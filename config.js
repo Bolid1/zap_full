@@ -10,12 +10,12 @@ myConfig = {
     result: fs.realpathSync(__dirname + '/result')
   },
   out_files: {
-    app: 'app.js',
     auth_fields: 'auth_fields.json',
     general: 'general.json',
     triggers: 'triggers.json',
     actions: 'actions.json',
-    searches: 'searches.json'
+    searches: 'searches.json',
+    app: 'app.js'
   },
   entities: {
     contact: {
