@@ -9,6 +9,14 @@ myConfig = {
     root: __dirname,
     result: fs.realpathSync(__dirname + '/result')
   },
+  out_files: [
+    'app.js',
+    'auth_fields.json',
+    'general.json',
+    'triggers.json',
+    'actions.json',
+    'searches.json'
+  ],
   entities: {
     contact: {
       many: 'contacts',
