@@ -35,12 +35,56 @@ require('chai').should();
 
 describe('result/app', function () {
   describe('All keys must exist', function () {
-    ['actions', 'searches', 'triggers'].forEach(function () {
-      // @TODO:
+    var props = [
+      'pre_subscribe',
+      'pre_unsubscribe'
+    ];
+    ['actions', 'searches', 'triggers'].forEach(function (type) {
+      _.keys(config[type].entities).forEach(function (entity) {
+        _.keys(config[type].actions).forEach(function (action) {
+          if (config[type].actions[action].only) {
+            if (_.indexOf(config[type].actions[action].only, entity) === -1) {
+              return;
+            }
+          }
+
+          var prefix, postfixes = [];
+
+          switch (type) {
+            case 'actions':
+              prefix = [entity, action].join('_');
+              postfixes.push('post_custom_action_fields', 'pre_write', 'post_write');
+              break;
+            case 'searches':
+              prefix = [entity, action].join('_');
+              postfixes.push('post_custom_search_fields', 'pre_search', 'post_search', 'post_read_resource');
+              break;
+            case 'triggers':
+              prefix = [action, entity].join('_');
+              postfixes.push('catch_hook', 'pre_poll', 'post_poll');
+              if (action !== 'delete') {
+                postfixes.push('post_custom_trigger_fields');
+              }
+              break;
+          }
+
+          postfixes.forEach(function (postfix) {
+            props.push([prefix, postfix].join('_'));
+          });
+        });
+      });
+    });
+
+    props.forEach(function (prop) {
+      it('Property "' + prop + '" must exist and be a function', function () {
+        Zap.should.has.property(prop);
+        Zap[prop].should.be.a('function');
+      });
     });
   });
 
   describe('Check every bundle', function () {
+    var checked_array = [];
     _.each(['company', 'contact', 'lead', 'note', 'task'], function (entity) {
       _.each(['action', 'hook'], function (type) {
         describe([utils.string.capitalize(type + 's'), 'for entity', entity].join(' '), function () {
@@ -134,10 +178,17 @@ describe('result/app', function () {
               it('Results must be equals', function () {
                 test_result.should.deep.equal(test_data.result);
               });
+
+              checked_array.push(action_name);
             });
           });
         });
       });
+    });
+
+    var diff = _.difference(_.keys(Zap), checked_array);
+    it('All props must be checked!', function () {
+      diff.should.deep.equal([]);
     });
   });
 });
