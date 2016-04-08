@@ -1,0 +1,53 @@
+{
+  "bundle": {
+    "auth_fields": {
+      "login": "v.vargin@team.amocrm.com",
+      "api_key": "9292ec5cdb8d5d48bb307cd83c6a0d02",
+      "account": "test"
+    },
+    "request": {
+      "files": null,
+      "url": "https://test.amocrm.com/private/api/v2/json/company/list/",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Accept": "application/json"
+      },
+      "params": {
+        "USER_LOGIN": "v.vargin@team.amocrm.com",
+        "USER_HASH": "9292ec5cdb8d5d48bb307cd83c6a0d02"
+      },
+      "data": null,
+      "method": "GET"
+    },
+    "search_fields": {
+      "query": "52513083"
+    },
+    "meta": {
+      "frontend": true
+    },
+    "url_raw": "https://{{account}}.amocrm.com/private/api/v2/json/company/list/",
+    "zap": {
+      "live": false,
+      "link": "https://zapier.com/app/edit/8061985",
+      "name": "Find lead",
+      "user": {
+        "timezone": "UTC"
+      }
+    }
+  },
+  "result": {
+    "files": null,
+    "url": "https://test.amocrm.com/private/api/v2/json/company/list/",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Accept": "application/json"
+    },
+    "params": {
+      "USER_LOGIN": "v.vargin@team.amocrm.com",
+      "USER_HASH": "9292ec5cdb8d5d48bb307cd83c6a0d02",
+      "query": "52513083"
+    },
+    "data": null,
+    "method": "GET"
+  }
+}
