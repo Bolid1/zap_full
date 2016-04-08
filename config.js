@@ -7,7 +7,8 @@ var
 myConfig = {
   paths: {
     root: __dirname,
-    result: fs.realpathSync(__dirname + '/result')
+    result: fs.realpathSync(__dirname + '/result'),
+    tests: fs.realpathSync(__dirname + '/tests/result')
   },
   out_files: {
     auth_fields: 'auth_fields.json',
@@ -16,6 +17,15 @@ myConfig = {
     actions: 'actions.json',
     searches: 'searches.json',
     app: 'app.js'
+  },
+  modules: {
+    app: {
+      out: 'Zap',
+      dependencies: {
+        _: 'underscore',
+        moment: 'moment'
+      }
+    }
   },
   entities: {
     contact: {
