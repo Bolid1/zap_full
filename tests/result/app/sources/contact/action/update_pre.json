@@ -1,0 +1,303 @@
+{
+  "bundle": {
+    "auth_fields": {
+      "top_level_domain": "com",
+      "login": "v.vargin@team.amocrm.com",
+      "api_key": "9292ec5cdb8d5d48bb307cd83c6a0d02",
+      "account": "aprokinabeta"
+    },
+    "request": {
+      "files": {},
+      "url": "https://aprokinabeta.amocrm.com/private/api/v2/json/contacts/set/",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Accept": "application/json"
+      },
+      "params": {
+        "USER_LOGIN": "v.vargin@team.amocrm.com",
+        "USER_HASH": "9292ec5cdb8d5d48bb307cd83c6a0d02"
+      },
+      "data": "{\"pipeline_id\": 122201, \"name\": \"Helena \", \"company_name\": \"amocrm\", \"custom_fields\": {\"1486967\": {\"3556225\": [\"fjkghasd@mail.ru\"], \"3556227\": [\"djhkd@ksdj.com\"]}, \"1486965\": {\"3556215\": [\"2893749872398\"], \"3556217\": [\"9829292929\"], \"3556213\": [\"3287498378932\"], \"3556219\": [\"389742\"], \"3556221\": [\"9385785\"], \"3556223\": [\"475692\"]}, \"1531558\": \"1980-09-10T00:00:00+00:00\", \"1486963\": \"ldldfjljsa\", \"1486971\": {\"3556233\": [\"998786\"], \"3556231\": [\"dsfkj_skhd\"]}, \"1531171\": {\"country\": \"Russia\", \"city\": \"Moscow\"}, \"1531185\": \"jdhfkjd, ifoie, wdhish\"}, \"id\": 52764800}",
+      "method": "POST"
+    },
+    "action_fields": {
+      "id": 52764800,
+      "pipeline_id": 122201,
+      "name": "Helena ",
+      "custom_fields": {
+        "1486967": {
+          "3556225": [
+            "fjkghasd@mail.ru"
+          ],
+          "3556227": [
+            "djhkd@ksdj.com"
+          ]
+        },
+        "1486965": {
+          "3556215": [
+            "2893749872398"
+          ],
+          "3556217": [
+            "9829292929"
+          ],
+          "3556213": [
+            "3287498378932"
+          ],
+          "3556219": [
+            "389742"
+          ],
+          "3556221": [
+            "9385785"
+          ],
+          "3556223": [
+            "475692"
+          ]
+        },
+        "1531558": "datetime-1980-09-10T00:00:00+00:00",
+        "1486963": "ldldfjljsa",
+        "1486971": {
+          "3556233": [
+            "998786"
+          ],
+          "3556231": [
+            "dsfkj_skhd"
+          ]
+        },
+        "1531171": {
+          "country": "Russia",
+          "city": "Moscow"
+        },
+        "1531185": "jdhfkjd, ifoie, wdhish"
+      },
+      "company_name": "amocrm"
+    },
+    "action_fields_full": {
+      "custom_fields__1486965__3556213": [
+        "3287498378932"
+      ],
+      "custom_fields__1531185": "jdhfkjd, ifoie, wdhish",
+      "custom_fields__1486965__3556215": [
+        "2893749872398"
+      ],
+      "custom_fields__1486971__3556233": [
+        "998786"
+      ],
+      "custom_fields__1486965__3556217": [
+        "9829292929"
+      ],
+      "custom_fields__1486965__3556223": [
+        "475692"
+      ],
+      "custom_fields__1486965__3556219": [
+        "389742"
+      ],
+      "custom_fields__1486967__3556227": [
+        "djhkd@ksdj.com"
+      ],
+      "custom_fields__1486963": "ldldfjljsa",
+      "custom_fields__1486967__3556225": [
+        "fjkghasd@mail.ru"
+      ],
+      "custom_fields__1531171__country": "Russia",
+      "custom_fields__1486965__3556221": [
+        "9385785"
+      ],
+      "pipeline_id": 122201,
+      "custom_fields__1486971__3556231": [
+        "dsfkj_skhd"
+      ],
+      "custom_fields__1531171__city": "Moscow",
+      "company_name": "amocrm",
+      "id": 52764800,
+      "custom_fields__1531558": "datetime-1980-09-10T00:00:00+00:00",
+      "name": "Helena "
+    },
+    "meta": {
+      "frontend": true
+    },
+    "action_fields_raw": {
+      "custom_fields__1486965__3556213": [
+        "3287498378932"
+      ],
+      "custom_fields__1531185": "jdhfkjd, ifoie, wdhish",
+      "custom_fields__1486965__3556215": [
+        "2893749872398"
+      ],
+      "name": "Helena ",
+      "custom_fields__1486965__3556217": [
+        "9829292929"
+      ],
+      "custom_fields__1486965__3556223": [
+        "475692"
+      ],
+      "custom_fields__1486965__3556219": [
+        "389742"
+      ],
+      "custom_fields__1486967__3556227": [
+        "djhkd@ksdj.com"
+      ],
+      "custom_fields__1486963": "{{8373824__text}}",
+      "custom_fields__1486967__3556225": [
+        "fjkghasd@mail.ru"
+      ],
+      "custom_fields__1531171__country": "Russia",
+      "custom_fields__1486965__3556221": [
+        "9385785"
+      ],
+      "pipeline_id": "122201",
+      "custom_fields__1486971__3556231": [
+        "dsfkj_skhd"
+      ],
+      "custom_fields__1531171__city": "Moscow",
+      "company_name": "{{8373824__team_domain}}",
+      "id": "52764800",
+      "custom_fields__1531558": "09/10/80",
+      "custom_fields__1486971__3556233": [
+        "998786"
+      ]
+    },
+    "url_raw": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/contacts/set/",
+    "zap": {
+      "live": false,
+      "link": "https://zapier.com/app/edit/8373824",
+      "name": "update contact slack",
+      "user": {
+        "timezone": "UTC"
+      }
+    }
+  },
+  "result": {
+    "files": {},
+    "url": "https://aprokinabeta.amocrm.com/private/api/v2/json/contacts/set/",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Accept": "application/json"
+    },
+    "params": {
+      "USER_LOGIN": "v.vargin@team.amocrm.com",
+      "USER_HASH": "9292ec5cdb8d5d48bb307cd83c6a0d02"
+    },
+    "data": {
+      "request": {
+        "contacts": {
+          "update": [
+            {
+              "id": 52764800,
+              "pipeline_id": 122201,
+              "name": "Helena ",
+              "custom_fields": [
+                {
+                  "id": "1486963",
+                  "values": [
+                    {
+                      "value": "ldldfjljsa"
+                    }
+                  ]
+                },
+                {
+                  "id": "1486965",
+                  "values": [
+                    {
+                      "value": "3287498378932",
+                      "enum": "3556213",
+                      "subtype": "3556213"
+                    },
+                    {
+                      "value": "2893749872398",
+                      "enum": "3556215",
+                      "subtype": "3556215"
+                    },
+                    {
+                      "value": "9829292929",
+                      "enum": "3556217",
+                      "subtype": "3556217"
+                    },
+                    {
+                      "value": "389742",
+                      "enum": "3556219",
+                      "subtype": "3556219"
+                    },
+                    {
+                      "value": "9385785",
+                      "enum": "3556221",
+                      "subtype": "3556221"
+                    },
+                    {
+                      "value": "475692",
+                      "enum": "3556223",
+                      "subtype": "3556223"
+                    }
+                  ]
+                },
+                {
+                  "id": "1486967",
+                  "values": [
+                    {
+                      "value": "fjkghasd@mail.ru",
+                      "enum": "3556225",
+                      "subtype": "3556225"
+                    },
+                    {
+                      "value": "djhkd@ksdj.com",
+                      "enum": "3556227",
+                      "subtype": "3556227"
+                    }
+                  ]
+                },
+                {
+                  "id": "1486971",
+                  "values": [
+                    {
+                      "value": "dsfkj_skhd",
+                      "enum": "3556231",
+                      "subtype": "3556231"
+                    },
+                    {
+                      "value": "998786",
+                      "enum": "3556233",
+                      "subtype": "3556233"
+                    }
+                  ]
+                },
+                {
+                  "id": "1531171",
+                  "values": [
+                    {
+                      "value": "Russia",
+                      "enum": "country",
+                      "subtype": "country"
+                    },
+                    {
+                      "value": "Moscow",
+                      "enum": "city",
+                      "subtype": "city"
+                    }
+                  ]
+                },
+                {
+                  "id": "1531185",
+                  "values": [
+                    {
+                      "value": "jdhfkjd, ifoie, wdhish"
+                    }
+                  ]
+                },
+                {
+                  "id": "1531558",
+                  "values": [
+                    {
+                      "value": "datetime-1980-09-10T00:00:00+00:00"
+                    }
+                  ]
+                }
+              ],
+              "company_name": "amocrm",
+              "last_modified": "1460364843"
+            }
+          ]
+        }
+      }
+    },
+    "method": "POST"
+  }
+}
