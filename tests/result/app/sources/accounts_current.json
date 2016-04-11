@@ -2,17 +2,17 @@
   "response": {
     "account": {
       "id": "9931843",
-      "name": "test",
-      "subdomain": "test",
-      "currency": "NOK",
+      "name": "aprokinabeta",
+      "subdomain": "aprokinabeta",
+      "currency": "RUB",
       "paid_from": false,
       "paid_till": false,
-      "timezone": "America\/New_York",
+      "timezone": "Europe\/Moscow",
       "language": "en",
-      "date_pattern": "d\/m\/Y H:i",
-      "date_format": "d\/m\/Y",
+      "date_pattern": "d.m.Y H:i",
+      "date_format": "d.m.Y",
       "time_format": "H:i:s",
-      "country": "lv",
+      "country": "ru",
       "unsorted_on": "Y",
       "limits": {
         "users_count": false,
@@ -20,6 +20,90 @@
         "active_deals_count": false
       },
       "users": [
+        {
+          "id": "773176",
+          "mail_admin": "A",
+          "name": "Olga Postnikova",
+          "last_name": null,
+          "login": "opostnikova@team.amocrm.com",
+          "photo_url": null,
+          "phone_number": "",
+          "language": "en",
+          "group_id": 46283,
+          "rights_lead_add": "A",
+          "rights_lead_view": "A",
+          "rights_lead_edit": "A",
+          "rights_lead_delete": "A",
+          "rights_lead_export": "A",
+          "rights_contact_add": "A",
+          "rights_contact_view": "A",
+          "rights_contact_edit": "A",
+          "rights_contact_delete": "A",
+          "rights_contact_export": "A",
+          "rights_company_add": "A",
+          "rights_company_view": "A",
+          "rights_company_edit": "A",
+          "rights_company_delete": "A",
+          "rights_company_export": "A",
+          "unsorted_access": "Y",
+          "is_admin": "Y"
+        },
+        {
+          "id": "771868",
+          "mail_admin": "A",
+          "name": "Irene Alicia Gonz\u00e1lez",
+          "last_name": null,
+          "login": "idenisuk@team.amocrm.com",
+          "photo_url": null,
+          "phone_number": "",
+          "language": "es",
+          "group_id": 46283,
+          "rights_lead_add": "A",
+          "rights_lead_view": "A",
+          "rights_lead_edit": "A",
+          "rights_lead_delete": "A",
+          "rights_lead_export": "A",
+          "rights_contact_add": "A",
+          "rights_contact_view": "A",
+          "rights_contact_edit": "A",
+          "rights_contact_delete": "A",
+          "rights_contact_export": "A",
+          "rights_company_add": "A",
+          "rights_company_view": "A",
+          "rights_company_edit": "A",
+          "rights_company_delete": "A",
+          "rights_company_export": "A",
+          "unsorted_access": "Y",
+          "is_admin": "Y"
+        },
+        {
+          "id": "766420",
+          "mail_admin": "A",
+          "name": "Karina Gasparian",
+          "last_name": "",
+          "login": "kgasparyan@team.amocrm.com",
+          "photo_url": null,
+          "phone_number": "89689498642",
+          "language": "en",
+          "group_id": 46283,
+          "rights_lead_add": "A",
+          "rights_lead_view": "A",
+          "rights_lead_edit": "A",
+          "rights_lead_delete": "A",
+          "rights_lead_export": "A",
+          "rights_contact_add": "A",
+          "rights_contact_view": "A",
+          "rights_contact_edit": "A",
+          "rights_contact_delete": "A",
+          "rights_contact_export": "A",
+          "rights_company_add": "A",
+          "rights_company_view": "A",
+          "rights_company_edit": "A",
+          "rights_company_delete": "A",
+          "rights_company_export": "A",
+          "unsorted_access": "Y",
+          "is_admin": "Y"
+        },
         {
           "id": "696020",
           "mail_admin": "D",
@@ -57,7 +141,7 @@
           "photo_url": null,
           "phone_number": null,
           "language": null,
-          "group_id": 35540,
+          "group_id": 0,
           "rights_lead_add": "A",
           "rights_lead_view": "M",
           "rights_lead_edit": "D",
@@ -85,7 +169,7 @@
           "photo_url": null,
           "phone_number": "",
           "language": "en",
-          "group_id": 35540,
+          "group_id": 46283,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
           "rights_lead_edit": "A",
@@ -105,32 +189,32 @@
           "is_admin": "Y"
         },
         {
-          "id": "641553",
-          "mail_admin": "D",
-          "name": "Alina Prokina",
-          "last_name": "",
-          "login": "aprokina@team.amocrm.com",
-          "photo_url": null,
-          "phone_number": "+79250358925",
+          "id": "635394",
+          "mail_admin": "A",
+          "name": "\u041c\u0438\u0445\u0430\u0438\u043b \u041c\u0443\u0440\u0437\u0438\u043d",
+          "last_name": null,
+          "login": "mmurzin@team.amocrm.com",
+          "photo_url": "\/upload\/main\/efb\/capture-20140107-161153e1e.jpg",
+          "phone_number": "",
           "language": "en",
-          "group_id": 0,
+          "group_id": 35540,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
           "rights_lead_edit": "A",
           "rights_lead_delete": "A",
-          "rights_lead_export": "D",
+          "rights_lead_export": "A",
           "rights_contact_add": "A",
           "rights_contact_view": "A",
           "rights_contact_edit": "A",
           "rights_contact_delete": "A",
-          "rights_contact_export": "D",
-          "rights_company_add": "D",
-          "rights_company_view": "D",
-          "rights_company_edit": "D",
-          "rights_company_delete": "D",
-          "rights_company_export": "D",
-          "unsorted_access": "N",
-          "is_admin": null
+          "rights_contact_export": "A",
+          "rights_company_add": "A",
+          "rights_company_view": "A",
+          "rights_company_edit": "A",
+          "rights_company_delete": "A",
+          "rights_company_export": "A",
+          "unsorted_access": "Y",
+          "is_admin": "Y"
         },
         {
           "id": "620487",
@@ -166,10 +250,10 @@
           "name": "\u041c\u0430\u0440\u0438\u044f \u0425\u0440\u0443\u0437\u0438\u043d\u0430",
           "last_name": null,
           "login": "mhruzina@team.amocrm.com",
-          "photo_url": "\/upload\/main\/1ed\/19503_avatarz1s v1m.gif",
-          "phone_number": "1232",
-          "language": "en",
-          "group_id": 0,
+          "photo_url": "\/upload\/main\/7fa\/19503_avatarz1s.gif",
+          "phone_number": "123",
+          "language": "ru",
+          "group_id": 35540,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
           "rights_lead_edit": "A",
@@ -222,10 +306,10 @@
           "name": "\u041d\u0438\u043a\u0438\u0442\u0430 \u0411\u0435\u0441\u0441\u0443\u0434\u043d\u043e\u0432",
           "last_name": null,
           "login": "nbessudnov@team.amocrm.com",
-          "photo_url": "\/upload\/main\/717\/mYiKqfZSmPk.jpg",
+          "photo_url": "\/upload\/main\/d8a\/mYiKqfZSmPk.jpg",
           "phone_number": "",
-          "language": "ru",
-          "group_id": 35540,
+          "language": "en",
+          "group_id": 0,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
           "rights_lead_edit": "A",
@@ -251,9 +335,9 @@
           "last_name": null,
           "login": "omalgina@team.amocrm.com",
           "photo_url": null,
-          "phone_number": "+79851433094",
-          "language": "en",
-          "group_id": 0,
+          "phone_number": "+79851433096",
+          "language": "ru",
+          "group_id": 46283,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
           "rights_lead_edit": "A",
@@ -280,7 +364,7 @@
           "login": "elena@team.amocrm.com",
           "photo_url": null,
           "phone_number": "",
-          "language": "en",
+          "language": "ru",
           "group_id": 35540,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
@@ -303,13 +387,13 @@
         {
           "id": "281868",
           "mail_admin": "A",
-          "name": "dkrasnorutsky@team.amocrm.com",
+          "name": "\u041a\u0440\u0430\u0441\u043d\u043e\u0440\u0443\u0446\u043a\u0438\u0439 \u0414\u043c\u0438\u0442\u0440\u0438\u0439",
           "last_name": null,
           "login": "dkrasnorutsky@team.amocrm.com",
-          "photo_url": "\/upload\/main\/18e\/background.png",
+          "photo_url": "\/upload\/main\/719\/background.png",
           "phone_number": "123123121",
           "language": "ru",
-          "group_id": 0,
+          "group_id": 35540,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
           "rights_lead_edit": "A",
@@ -336,7 +420,7 @@
           "login": "v.vargin@team.amocrm.com",
           "photo_url": null,
           "phone_number": "+79166147100",
-          "language": "ru",
+          "language": "en",
           "group_id": 0,
           "rights_lead_add": "A",
           "rights_lead_view": "A",
@@ -362,7 +446,7 @@
           "name": "\u0412\u0430\u0434\u0438\u043c \u041a\u0443\u043b\u0430\u0433\u0438\u043d",
           "last_name": null,
           "login": "vkulagin@team.amocrm.com",
-          "photo_url": "\/upload\/main\/312\/VadimKulagin.png",
+          "photo_url": "\/upload\/main\/ad3\/VadimKulagin.png",
           "phone_number": "",
           "language": "ru",
           "group_id": 35540,
@@ -389,6 +473,10 @@
         {
           "id": 35540,
           "name": "Sup"
+        },
+        {
+          "id": 46283,
+          "name": "Managers"
         }
       ],
       "leads_statuses": [
@@ -453,7 +541,7 @@
         "contacts": [
           {
             "id": "1486963",
-            "name": "\u0414\u043e\u043b\u0436\u043d\u043e\u0441\u0442\u044c",
+            "name": "Position",
             "code": "POSITION",
             "multiple": "N",
             "type_id": "1",
@@ -461,7 +549,7 @@
           },
           {
             "id": "1486965",
-            "name": "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
+            "name": "Phone",
             "code": "PHONE",
             "multiple": "Y",
             "type_id": "8",
@@ -490,7 +578,7 @@
           },
           {
             "id": "1486971",
-            "name": "\u041c\u0433\u043d. \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f",
+            "name": "IM",
             "code": "IM",
             "multiple": "Y",
             "type_id": "8",
@@ -511,6 +599,62 @@
             "multiple": "N",
             "type_id": "3",
             "disabled": "1"
+          },
+          {
+            "id": "1531171",
+            "name": "\u0410\u0434\u0440\u0435\u0441 \u043f\u043e\u043b\u043d\u044b\u0439",
+            "code": "",
+            "multiple": "N",
+            "type_id": "13",
+            "disabled": "0",
+            "subtypes": {
+              "1": {
+                "id": 1,
+                "title": "Address line 1",
+                "name": "address_line_1"
+              },
+              "2": {
+                "id": 2,
+                "title": "Address line 2",
+                "name": "address_line_2"
+              },
+              "3": {
+                "id": 3,
+                "title": "City",
+                "name": "city"
+              },
+              "4": {
+                "id": 4,
+                "title": "State",
+                "name": "state"
+              },
+              "5": {
+                "id": 5,
+                "title": "ZIP",
+                "name": "zip"
+              },
+              "6": {
+                "id": 6,
+                "title": "Country",
+                "name": "country"
+              }
+            }
+          },
+          {
+            "id": "1531185",
+            "name": "\u041a\u043e\u0440\u043e\u0442\u043a\u0438\u0439 \u0430\u0434\u0440\u0435\u0441",
+            "code": "",
+            "multiple": "N",
+            "type_id": "11",
+            "disabled": "0"
+          },
+          {
+            "id": "1531558",
+            "name": "Birthday",
+            "code": "",
+            "multiple": "N",
+            "type_id": "14",
+            "disabled": "0"
           }
         ],
         "leads": [
@@ -708,12 +852,60 @@
             "multiple": "N",
             "type_id": "1",
             "disabled": "0"
+          },
+          {
+            "id": "1526582",
+            "name": "asdfadsf",
+            "code": "",
+            "multiple": "N",
+            "type_id": "13",
+            "disabled": "0",
+            "subtypes": {
+              "1": {
+                "id": 1,
+                "title": "Address line 1",
+                "name": "address_line_1"
+              },
+              "2": {
+                "id": 2,
+                "title": "Address line 2",
+                "name": "address_line_2"
+              },
+              "3": {
+                "id": 3,
+                "title": "City",
+                "name": "city"
+              },
+              "4": {
+                "id": 4,
+                "title": "State",
+                "name": "state"
+              },
+              "5": {
+                "id": 5,
+                "title": "ZIP",
+                "name": "zip"
+              },
+              "6": {
+                "id": 6,
+                "title": "Country",
+                "name": "country"
+              }
+            }
+          },
+          {
+            "id": "1531187",
+            "name": "Short address",
+            "code": "",
+            "multiple": "N",
+            "type_id": "11",
+            "disabled": "0"
           }
         ],
         "companies": [
           {
             "id": "1486965",
-            "name": "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
+            "name": "Phone",
             "code": "PHONE",
             "multiple": "Y",
             "type_id": "8",
@@ -750,7 +942,7 @@
           },
           {
             "id": "1486973",
-            "name": "\u0410\u0434\u0440\u0435\u0441",
+            "name": "Address",
             "code": "ADDRESS",
             "multiple": "N",
             "type_id": "9",
@@ -845,19 +1037,19 @@
         },
         {
           "id": 101,
-          "name": "\u0421\u0441\u044b\u043b\u043a\u0430",
+          "name": "Link",
           "code": "DROPBOX",
           "editable": "N"
         },
         {
           "id": 102,
-          "name": "\u0412\u0445\u043e\u0434\u044f\u0449\u0435\u0435",
+          "name": "Incoming",
           "code": "SMS_IN",
           "editable": "N"
         },
         {
           "id": 103,
-          "name": "\u0418\u0441\u0445\u043e\u0434\u044f\u0449\u0435\u0435",
+          "name": "Outgoing",
           "code": "SMS_OUT",
           "editable": "N"
         }
@@ -870,17 +1062,17 @@
         },
         {
           "id": 1,
-          "name": "\u0417\u0432\u043e\u043d\u043e\u043a",
+          "name": "Call",
           "code": "CALL"
         },
         {
           "id": 2,
-          "name": "\u0412\u0441\u0442\u0440\u0435\u0447\u0430",
+          "name": "Meeting",
           "code": "MEETING"
         },
         {
           "id": 3,
-          "name": "\u041f\u0438\u0441\u044c\u043c\u043e",
+          "name": "Letter",
           "code": "LETTER"
         },
         {
@@ -985,7 +1177,7 @@
               "pipeline_id": 53218
             }
           },
-          "leads": 269
+          "leads": 293
         },
         "75137": {
           "id": 75137,
@@ -1044,7 +1236,7 @@
               "pipeline_id": 75137
             }
           },
-          "leads": 7
+          "leads": 9
         },
         "96604": {
           "id": 96604,
@@ -1195,7 +1387,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1203,7 +1395,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1302,7 +1494,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1310,7 +1502,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1409,7 +1601,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1417,7 +1609,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1516,7 +1708,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1524,7 +1716,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1623,7 +1815,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1631,7 +1823,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1730,7 +1922,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1738,7 +1930,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1837,7 +2029,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1845,7 +2037,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -1944,7 +2136,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -1952,7 +2144,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2051,7 +2243,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2059,7 +2251,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2158,7 +2350,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2166,7 +2358,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2265,7 +2457,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2273,7 +2465,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2372,7 +2564,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2380,7 +2572,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2479,7 +2671,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2487,7 +2679,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2586,7 +2778,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2594,7 +2786,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2693,7 +2885,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2701,7 +2893,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2800,7 +2992,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2808,7 +3000,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -2907,7 +3099,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -2915,7 +3107,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -3014,7 +3206,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -3022,7 +3214,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -3121,7 +3313,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -3129,7 +3321,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -3228,7 +3420,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -3236,7 +3428,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -4295,7 +4487,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -4303,7 +4495,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -5629,7 +5821,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -5637,7 +5829,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -5736,7 +5928,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -5744,7 +5936,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -5843,7 +6035,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -5851,7 +6043,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -5950,7 +6142,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -5958,7 +6150,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6057,7 +6249,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6065,7 +6257,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6164,7 +6356,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6172,7 +6364,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6271,7 +6463,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6279,7 +6471,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6378,7 +6570,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6386,7 +6578,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6485,7 +6677,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6493,7 +6685,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6592,7 +6784,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6600,7 +6792,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6699,7 +6891,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6707,7 +6899,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6806,7 +6998,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6814,7 +7006,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -6913,7 +7105,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -6921,7 +7113,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7020,7 +7212,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7028,7 +7220,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7127,7 +7319,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7135,7 +7327,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7234,7 +7426,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7242,7 +7434,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7341,7 +7533,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7349,7 +7541,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7448,7 +7640,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7456,7 +7648,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7555,7 +7747,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7563,7 +7755,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -7662,7 +7854,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -7670,7 +7862,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -8729,7 +8921,7 @@
             },
             "142": {
               "id": 142,
-              "name": "\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - won",
               "color": "#CCFF66",
               "sort": 10000,
               "editable": "N",
@@ -8737,7 +8929,7 @@
             },
             "143": {
               "id": 143,
-              "name": "\u0417\u0430\u043a\u0440\u044b\u0442\u043e \u0438 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043e",
+              "name": "Closed - lost",
               "color": "#D5D8DB",
               "sort": 11000,
               "editable": "N",
@@ -9974,8 +10166,8 @@
           "leads": 0
         }
       },
-      "timezoneoffset": "-05:00"
+      "timezoneoffset": "+03:00"
     },
-    "server_time": 1458823550
+    "server_time": 1460363165
   }
 }
