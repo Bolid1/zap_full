@@ -12,9 +12,9 @@ var confSearches = {
     "noun": "Contact",
     "important": true,
     "hide": false,
-    "url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/contacts/list/",
-    "custom_fields_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/",
-    "resource_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/contacts/list/?id={{id}}",
+    "url": "https://{{account}}.amocrm.com/private/api/v2/json/contacts/list/",
+    "custom_fields_url": "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/",
+    "resource_url": "https://{{account}}.amocrm.com/private/api/v2/json/contacts/list/?id={{id}}",
     "action_pair_label": "Find or Create Contact",
     "action_pair_key": "contact_add",
     "sample_result_fields": [],
@@ -52,9 +52,9 @@ var confSearches = {
     "noun": "Lead",
     "important": true,
     "hide": false,
-    "url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/leads/list/",
-    "custom_fields_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/",
-    "resource_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/leads/list/?id={{id}}",
+    "url": "https://{{account}}.amocrm.com/private/api/v2/json/leads/list/",
+    "custom_fields_url": "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/",
+    "resource_url": "https://{{account}}.amocrm.com/private/api/v2/json/leads/list/?id={{id}}",
     "action_pair_label": "Find or Create Lead",
     "action_pair_key": "lead_add",
     "sample_result_fields": [],
@@ -92,9 +92,9 @@ var confSearches = {
     "noun": "Company",
     "important": true,
     "hide": false,
-    "url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/company/list/",
-    "custom_fields_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/",
-    "resource_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/company/list/?id={{id}}",
+    "url": "https://{{account}}.amocrm.com/private/api/v2/json/company/list/",
+    "custom_fields_url": "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/",
+    "resource_url": "https://{{account}}.amocrm.com/private/api/v2/json/company/list/?id={{id}}",
     "action_pair_label": "Find or Create Company",
     "action_pair_key": "company_add",
     "sample_result_fields": [],
@@ -132,9 +132,9 @@ var confSearches = {
     "noun": "Task",
     "important": false,
     "hide": false,
-    "url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/tasks/list/",
-    "custom_fields_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/",
-    "resource_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/tasks/list/?id={{id}}",
+    "url": "https://{{account}}.amocrm.com/private/api/v2/json/tasks/list/",
+    "custom_fields_url": "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/",
+    "resource_url": "https://{{account}}.amocrm.com/private/api/v2/json/tasks/list/?id={{id}}",
     "action_pair_label": "Find or Create Task",
     "action_pair_key": "task_add",
     "sample_result_fields": [],
@@ -184,9 +184,9 @@ var confSearches = {
     "noun": "Note",
     "important": false,
     "hide": false,
-    "url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/notes/list/",
-    "custom_fields_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/",
-    "resource_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/notes/list/?id={{id}}",
+    "url": "https://{{account}}.amocrm.com/private/api/v2/json/notes/list/",
+    "custom_fields_url": "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/",
+    "resource_url": "https://{{account}}.amocrm.com/private/api/v2/json/notes/list/?id={{id}}",
     "action_pair_label": "Find or Create Note",
     "action_pair_key": "note_add",
     "sample_result_fields": [],
@@ -303,12 +303,17 @@ _.extend(URLParams.prototype, {
     return params;
   },
 
+  fixUrl: function (url, top_level_domain) {
+    return url.replace('.com', top_level_domain === 'ru' ? top_level_domain : 'com');
+  },
+
   buildUrl: function (subdomain, path) {
     return 'https://' + subdomain + '.amocrm.com/' + path;
   }
 });
 
 URLParams = new URLParams();
+
 
 var CustomFields = function () {};
 
@@ -1733,7 +1738,7 @@ _.extend(Application.prototype, {
 
   hooksPrePoll: function (action, entity, bundle) {
     return {
-      url: bundle.request.url,
+      url: URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain),
       method: bundle.request.method,
       auth: bundle.request.auth,
       headers: bundle.request.headers,
@@ -1749,6 +1754,10 @@ Application = new Application();
 var Zap;
 //noinspection JSUnusedGlobalSymbols
 Zap = {
+  auth_pre_poll: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   pre_subscribe: function (bundle) {
     return Application.subscribe_holder('subscribe', bundle);
   },
@@ -1757,6 +1766,10 @@ Zap = {
   },
   restore_contact_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_restore', 'contact', bundle.response.content);
+  },
+  restore_contact_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   restore_contact_catch_hook: function (bundle) {
     return Application.convertEntity('restore', 'contact', bundle.request.content, bundle.auth_fields.account);
@@ -1770,6 +1783,10 @@ Zap = {
   add_contact_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_add', 'contact', bundle.response.content);
   },
+  add_contact_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   add_contact_catch_hook: function (bundle) {
     return Application.convertEntity('add', 'contact', bundle.request.content, bundle.auth_fields.account);
   },
@@ -1781,6 +1798,10 @@ Zap = {
   },
   update_contact_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_update', 'contact', bundle.response.content);
+  },
+  update_contact_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   update_contact_catch_hook: function (bundle) {
     return Application.convertEntity('update', 'contact', bundle.request.content, bundle.auth_fields.account);
@@ -1800,8 +1821,16 @@ Zap = {
   delete_contact_pre_poll: function (bundle) {
     return Application.hooksPrePoll('delete', 'contact', bundle);
   },
+  delete_contact_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   contact_add_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_add', 'contact', bundle.response.content);
+  },
+  contact_add_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   contact_add_pre_write: function (bundle) {
     return Application.pre_write('add', 'contact', bundle);
@@ -1812,6 +1841,10 @@ Zap = {
   contact_update_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_update', 'contact', bundle.response.content);
   },
+  contact_update_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   contact_update_pre_write: function (bundle) {
     return Application.pre_write('update', 'contact', bundle);
   },
@@ -1821,17 +1854,29 @@ Zap = {
   contact_search_post_custom_search_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_search', 'contact', bundle.response.content);
   },
+  contact_search_pre_custom_search_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   contact_search_pre_search: function (bundle) {
     return Application.pre_search('contact', bundle);
   },
   contact_search_post_search: function (bundle) {
     return Application.post_search('contact', bundle);
   },
+  contact_search_pre_read_resource: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   contact_search_post_read_resource: function (bundle) {
     return Application.post_read_resource('contact', bundle);
   },
   restore_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_restore', 'lead', bundle.response.content);
+  },
+  restore_lead_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   restore_lead_catch_hook: function (bundle) {
     return Application.convertEntity('restore', 'lead', bundle.request.content, bundle.auth_fields.account);
@@ -1845,6 +1890,10 @@ Zap = {
   add_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_add', 'lead', bundle.response.content);
   },
+  add_lead_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   add_lead_catch_hook: function (bundle) {
     return Application.convertEntity('add', 'lead', bundle.request.content, bundle.auth_fields.account);
   },
@@ -1856,6 +1905,10 @@ Zap = {
   },
   update_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_update', 'lead', bundle.response.content);
+  },
+  update_lead_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   update_lead_catch_hook: function (bundle) {
     return Application.convertEntity('update', 'lead', bundle.request.content, bundle.auth_fields.account);
@@ -1869,6 +1922,10 @@ Zap = {
   status_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_status', 'lead', bundle.response.content);
   },
+  status_lead_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   status_lead_catch_hook: function (bundle) {
     return Application.convertEntity('status', 'lead', bundle.request.content, bundle.auth_fields.account);
   },
@@ -1880,6 +1937,10 @@ Zap = {
   },
   responsible_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_responsible', 'lead', bundle.response.content);
+  },
+  responsible_lead_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   responsible_lead_catch_hook: function (bundle) {
     return Application.convertEntity('responsible', 'lead', bundle.request.content, bundle.auth_fields.account);
@@ -1899,8 +1960,16 @@ Zap = {
   delete_lead_pre_poll: function (bundle) {
     return Application.hooksPrePoll('delete', 'lead', bundle);
   },
+  delete_lead_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   lead_add_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_add', 'lead', bundle.response.content);
+  },
+  lead_add_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   lead_add_pre_write: function (bundle) {
     return Application.pre_write('add', 'lead', bundle);
@@ -1911,6 +1980,10 @@ Zap = {
   lead_update_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_update', 'lead', bundle.response.content);
   },
+  lead_update_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   lead_update_pre_write: function (bundle) {
     return Application.pre_write('update', 'lead', bundle);
   },
@@ -1920,17 +1993,29 @@ Zap = {
   lead_search_post_custom_search_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_search', 'lead', bundle.response.content);
   },
+  lead_search_pre_custom_search_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   lead_search_pre_search: function (bundle) {
     return Application.pre_search('lead', bundle);
   },
   lead_search_post_search: function (bundle) {
     return Application.post_search('lead', bundle);
   },
+  lead_search_pre_read_resource: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   lead_search_post_read_resource: function (bundle) {
     return Application.post_read_resource('lead', bundle);
   },
   restore_company_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_restore', 'company', bundle.response.content);
+  },
+  restore_company_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   restore_company_catch_hook: function (bundle) {
     return Application.convertEntity('restore', 'company', bundle.request.content, bundle.auth_fields.account);
@@ -1944,6 +2029,10 @@ Zap = {
   add_company_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_add', 'company', bundle.response.content);
   },
+  add_company_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   add_company_catch_hook: function (bundle) {
     return Application.convertEntity('add', 'company', bundle.request.content, bundle.auth_fields.account);
   },
@@ -1955,6 +2044,10 @@ Zap = {
   },
   update_company_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_update', 'company', bundle.response.content);
+  },
+  update_company_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   update_company_catch_hook: function (bundle) {
     return Application.convertEntity('update', 'company', bundle.request.content, bundle.auth_fields.account);
@@ -1974,8 +2067,16 @@ Zap = {
   delete_company_pre_poll: function (bundle) {
     return Application.hooksPrePoll('delete', 'company', bundle);
   },
+  delete_company_pre_custom_trigger_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   company_add_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_add', 'company', bundle.response.content);
+  },
+  company_add_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   company_add_pre_write: function (bundle) {
     return Application.pre_write('add', 'company', bundle);
@@ -1986,6 +2087,10 @@ Zap = {
   company_update_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_update', 'company', bundle.response.content);
   },
+  company_update_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   company_update_pre_write: function (bundle) {
     return Application.pre_write('update', 'company', bundle);
   },
@@ -1995,17 +2100,29 @@ Zap = {
   company_search_post_custom_search_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_search', 'company', bundle.response.content);
   },
+  company_search_pre_custom_search_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   company_search_pre_search: function (bundle) {
     return Application.pre_search('company', bundle);
   },
   company_search_post_search: function (bundle) {
     return Application.post_search('company', bundle);
   },
+  company_search_pre_read_resource: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   company_search_post_read_resource: function (bundle) {
     return Application.post_read_resource('company', bundle);
   },
   task_add_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_add', 'task', bundle.response.content);
+  },
+  task_add_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   task_add_pre_write: function (bundle) {
     return Application.pre_write('add', 'task', bundle);
@@ -2016,6 +2133,10 @@ Zap = {
   task_update_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_update', 'task', bundle.response.content);
   },
+  task_update_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   task_update_pre_write: function (bundle) {
     return Application.pre_write('update', 'task', bundle);
   },
@@ -2024,6 +2145,10 @@ Zap = {
   },
   task_search_post_custom_search_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_search', 'task', bundle.response.content);
+  },
+  task_search_pre_custom_search_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   task_search_pre_search: function (bundle) {
     return Application.pre_search('task', bundle);
@@ -2040,6 +2165,10 @@ Zap = {
   note_add_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_add', 'note', bundle.response.content);
   },
+  note_add_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   note_add_pre_write: function (bundle) {
     return Application.pre_write('add', 'note', bundle);
   },
@@ -2049,6 +2178,10 @@ Zap = {
   note_update_post_custom_action_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_update', 'note', bundle.response.content);
   },
+  note_update_pre_custom_action_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
+  },
   note_update_pre_write: function (bundle) {
     return Application.pre_write('update', 'note', bundle);
   },
@@ -2057,6 +2190,10 @@ Zap = {
   },
   note_search_post_custom_search_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('action_search', 'note', bundle.response.content);
+  },
+  note_search_pre_custom_search_fields: function (bundle) {
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+    return bundle.request;
   },
   note_search_pre_search: function (bundle) {
     return Application.pre_search('note', bundle);

@@ -113,7 +113,7 @@ describe('result/actions', function () {
       });
 
       it('Url must be valid', function () {
-        var valid_url = 'https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/%s/set/';
+        var valid_url = 'https://{{account}}.amocrm.com/private/api/v2/json/%s/set/';
 
         switch (entity) {
           case 'contact':
@@ -130,7 +130,7 @@ describe('result/actions', function () {
       });
 
       it('Custom fields url must be valid', function () {
-        props.custom_fields_url.should.equal('https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/');
+        props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/');
       });
 
       it('Important check', function () {

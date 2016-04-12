@@ -3,7 +3,7 @@ var
   utils = require('./../../lib/utils'),
   Zap = require('./app/app'),
   config = require('./../../config'),
-  new_tests_dir = __dirname + '/app/sources',
+  tests_sources_dir = __dirname + '/app/sources',
   fs = require('fs'),
   removeDateFields;
 
@@ -86,13 +86,51 @@ describe('result/app', function () {
     });
   });
 
+  describe('All pre handlers must exist', function () {
+    var props = [
+      'pre_subscribe',
+      'pre_unsubscribe'
+    ];
+    ['actions', 'searches', 'triggers'].forEach(function (type) {
+      _.keys(JSON.parse(fs.readFileSync([config.paths.result, type + '.json'].join('/'), 'utf8'))).forEach(function (prefix) {
+        var postfixes = [];
+        switch (type) {
+          case 'actions':
+            postfixes.push('pre_custom_action_fields', 'pre_write');
+            break;
+          case 'searches':
+            postfixes.push('pre_custom_search_fields', 'pre_search', 'pre_read_resource');
+            break;
+          case 'triggers':
+            postfixes.push('pre_poll');
+            if (prefix !== 'auth') {
+              postfixes.push('pre_custom_trigger_fields');
+            }
+            break;
+        }
+
+        postfixes.forEach(function (postfix) {
+          props.push([prefix, postfix].join('_'));
+        });
+      });
+    });
+
+    props.forEach(function (prop) {
+      it('Property "' + prop + '" must exist and be a function', function () {
+        Zap.should.has.property(prop);
+        Zap[prop].should.be.a('function');
+        console.log(Zap[prop]);
+      });
+    });
+  });
+
   describe('Check every bundle', function () {
     var checked_array = [];
     _.each(['company', 'contact', 'lead', 'note', 'task'], function (entity) {
       _.each(['action', 'hook'], function (type) {
         describe([utils.string.capitalize(type + 's'), 'for entity', entity].join(' '), function () {
           var
-            test_dir = [new_tests_dir, entity, type].join('/'),
+            test_dir = [tests_sources_dir, entity, type].join('/'),
             test_dir_exist = false;
 
           if (type === 'hook') {
@@ -153,7 +191,7 @@ describe('result/app', function () {
               });
 
               if (is_custom) {
-                test_data.bundle.response.content = fs.readFileSync([new_tests_dir, 'accounts_current.json'].join('/'), 'utf8');
+                test_data.bundle.response.content = fs.readFileSync([tests_sources_dir, 'accounts_current.json'].join('/'), 'utf8');
               }
 
 

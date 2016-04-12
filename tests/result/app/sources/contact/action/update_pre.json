@@ -156,7 +156,7 @@
         "998786"
       ]
     },
-    "url_raw": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/contacts/set/",
+    "url_raw": "https://{{account}}.amocrm.com/private/api/v2/json/contacts/set/",
     "zap": {
       "live": false,
       "link": "https://zapier.com/app/edit/8373824",

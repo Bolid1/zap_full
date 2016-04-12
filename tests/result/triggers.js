@@ -32,7 +32,7 @@ describe('result/triggers', function () {
           "important": false,
           "hide": true,
           "data_source": "Polling",
-          "url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/auth.php?type=json",
+          "url": "https://{{account}}.amocrm.com/private/api/auth.php?type=json",
           "custom_fields_url": null,
           "hook_event": null,
           "hook_static_directions": "Log into your service and paste the below URL into the webhook setup field.",
@@ -206,7 +206,7 @@ describe('result/triggers', function () {
       });
 
       it('Url must be valid', function () {
-        var valid_url = 'https://webhooks.amocrm.{{top_level_domain}}/samples/{{account}}/%s/%s/';
+        var valid_url = 'https://webhooks.amocrm.com/samples/{{account}}/%s/%s/';
 
         switch (entity) {
           case 'contact':
@@ -221,7 +221,7 @@ describe('result/triggers', function () {
       });
 
       it('Custom fields url must be valid', function () {
-        props.custom_fields_url.should.equal('https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/');
+        props.custom_fields_url.should.equal('https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/');
       });
 
       it('Important check', function () {

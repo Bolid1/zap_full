@@ -1,6 +1,6 @@
 {
   "bundle": {
-    "raw_url": "https://{{account}}.amocrm.{{top_level_domain}}/private/api/v2/json/accounts/current/",
+    "raw_url": "https://{{account}}.amocrm.com/private/api/v2/json/accounts/current/",
     "auth_fields": {
       "top_level_domain": "com",
       "login": "v.vargin@team.amocrm.com",
