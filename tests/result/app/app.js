@@ -307,8 +307,8 @@ _.extend(URLParams.prototype, {
     return url.replace('.com', '.' + (top_level_domain === 'ru' ? top_level_domain : 'com'));
   },
 
-  buildUrl: function (subdomain, path) {
-    return 'https://' + subdomain + '.amocrm.com/' + path;
+  buildUrl: function (subdomain, path, top_level_domain) {
+    return this.fixUrl('https://' + subdomain + '.amocrm.com/' + path, top_level_domain);
   }
 });
 
@@ -1266,7 +1266,7 @@ _.extend(Application.prototype, {
     type = this.convertEntityName(type, 'api_name');
     var result = {
       id: 0,
-      url: URLParams.buildUrl(bundle.auth_fields.account, type + '/trash/'),
+      url: URLParams.buildUrl(bundle.auth_fields.account, type + '/trash/', bundle.auth_fields.top_level_domain),
       subdomain: bundle.auth_fields.account
     }, data;
 
@@ -1324,7 +1324,7 @@ _.extend(Application.prototype, {
 
     content[api_name] = {read: [entities[0]]};
 
-    content = this.convertEntity('read', type, content, bundle.auth_fields.account);
+    content = this.convertEntity('read', type, content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
 
     return this.convertForRead(type, content);
   },
@@ -1383,7 +1383,7 @@ _.extend(Application.prototype, {
     tmp = _.map(entities, function (entity) {
       var content = {};
       content[api_name] = {search: [entity]};
-      return this.convertEntity('search', type, content, bundle.auth_fields.account);
+      return this.convertEntity('search', type, content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
     }, this);
 
     return tmp;
@@ -1412,7 +1412,7 @@ _.extend(Application.prototype, {
     }
 
     if (result.id && (type === 'contacts' || type === 'leads' || type === 'companies')) {
-      result.url = URLParams.buildUrl(bundle.auth_fields.account, type + '/detail/' + result.id);
+      result.url = URLParams.buildUrl(bundle.auth_fields.account, type + '/detail/' + result.id, bundle.auth_fields.top_level_domain);
     }
 
     return result;
@@ -1625,7 +1625,7 @@ _.extend(Application.prototype, {
     return CustomFields.getAdditionsFields(action, entity, users, types);
   },
 
-  convertEntity: function (action, type, content, subdomain) {
+  convertEntity: function (action, type, content, subdomain, top_level_domain) {
     var
       result,
       entity = {},
@@ -1703,7 +1703,7 @@ _.extend(Application.prototype, {
     result.custom_fields = CustomFields.convertFromApi(entity.custom_fields, action);
 
     if (_.indexOf(['contacts', 'leads', 'companies'], this.convertEntityName(type, 'many')) > -1) {
-      result.link = URLParams.buildUrl(subdomain, this.convertEntityName(type, 'many') + '/detail/' + result.id);
+      result.link = URLParams.buildUrl(subdomain, this.convertEntityName(type, 'many') + '/detail/' + result.id, top_level_domain);
     }
 
     return result;
@@ -1781,13 +1781,13 @@ Zap = {
     return bundle.request;
   },
   restore_contact_catch_hook: function (bundle) {
-    return Application.convertEntity('restore', 'contact', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('restore', 'contact', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   restore_contact_pre_poll: function (bundle) {
     return Application.hooksPrePoll('restore', 'contact', bundle);
   },
   restore_contact_post_poll: function (bundle) {
-    return [Application.convertEntity('restore', 'contact', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('restore', 'contact', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   add_contact_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_add', 'contact', bundle.response.content);
@@ -1797,13 +1797,13 @@ Zap = {
     return bundle.request;
   },
   add_contact_catch_hook: function (bundle) {
-    return Application.convertEntity('add', 'contact', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('add', 'contact', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   add_contact_pre_poll: function (bundle) {
     return Application.hooksPrePoll('add', 'contact', bundle);
   },
   add_contact_post_poll: function (bundle) {
-    return [Application.convertEntity('add', 'contact', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('add', 'contact', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   update_contact_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_update', 'contact', bundle.response.content);
@@ -1813,13 +1813,13 @@ Zap = {
     return bundle.request;
   },
   update_contact_catch_hook: function (bundle) {
-    return Application.convertEntity('update', 'contact', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('update', 'contact', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   update_contact_pre_poll: function (bundle) {
     return Application.hooksPrePoll('update', 'contact', bundle);
   },
   update_contact_post_poll: function (bundle) {
-    return [Application.convertEntity('update', 'contact', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('update', 'contact', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   delete_contact_catch_hook: function (bundle) {
     return Application.delete_catch_hook('contact', bundle);
@@ -1888,13 +1888,13 @@ Zap = {
     return bundle.request;
   },
   restore_lead_catch_hook: function (bundle) {
-    return Application.convertEntity('restore', 'lead', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('restore', 'lead', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   restore_lead_pre_poll: function (bundle) {
     return Application.hooksPrePoll('restore', 'lead', bundle);
   },
   restore_lead_post_poll: function (bundle) {
-    return [Application.convertEntity('restore', 'lead', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('restore', 'lead', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   add_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_add', 'lead', bundle.response.content);
@@ -1904,13 +1904,13 @@ Zap = {
     return bundle.request;
   },
   add_lead_catch_hook: function (bundle) {
-    return Application.convertEntity('add', 'lead', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('add', 'lead', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   add_lead_pre_poll: function (bundle) {
     return Application.hooksPrePoll('add', 'lead', bundle);
   },
   add_lead_post_poll: function (bundle) {
-    return [Application.convertEntity('add', 'lead', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('add', 'lead', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   update_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_update', 'lead', bundle.response.content);
@@ -1920,13 +1920,13 @@ Zap = {
     return bundle.request;
   },
   update_lead_catch_hook: function (bundle) {
-    return Application.convertEntity('update', 'lead', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('update', 'lead', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   update_lead_pre_poll: function (bundle) {
     return Application.hooksPrePoll('update', 'lead', bundle);
   },
   update_lead_post_poll: function (bundle) {
-    return [Application.convertEntity('update', 'lead', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('update', 'lead', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   status_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_status', 'lead', bundle.response.content);
@@ -1936,13 +1936,13 @@ Zap = {
     return bundle.request;
   },
   status_lead_catch_hook: function (bundle) {
-    return Application.convertEntity('status', 'lead', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('status', 'lead', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   status_lead_pre_poll: function (bundle) {
     return Application.hooksPrePoll('status', 'lead', bundle);
   },
   status_lead_post_poll: function (bundle) {
-    return [Application.convertEntity('status', 'lead', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('status', 'lead', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   responsible_lead_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_responsible', 'lead', bundle.response.content);
@@ -1952,13 +1952,13 @@ Zap = {
     return bundle.request;
   },
   responsible_lead_catch_hook: function (bundle) {
-    return Application.convertEntity('responsible', 'lead', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('responsible', 'lead', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   responsible_lead_pre_poll: function (bundle) {
     return Application.hooksPrePoll('responsible', 'lead', bundle);
   },
   responsible_lead_post_poll: function (bundle) {
-    return [Application.convertEntity('responsible', 'lead', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('responsible', 'lead', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   delete_lead_catch_hook: function (bundle) {
     return Application.delete_catch_hook('lead', bundle);
@@ -2027,13 +2027,13 @@ Zap = {
     return bundle.request;
   },
   restore_company_catch_hook: function (bundle) {
-    return Application.convertEntity('restore', 'company', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('restore', 'company', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   restore_company_pre_poll: function (bundle) {
     return Application.hooksPrePoll('restore', 'company', bundle);
   },
   restore_company_post_poll: function (bundle) {
-    return [Application.convertEntity('restore', 'company', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('restore', 'company', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   add_company_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_add', 'company', bundle.response.content);
@@ -2043,13 +2043,13 @@ Zap = {
     return bundle.request;
   },
   add_company_catch_hook: function (bundle) {
-    return Application.convertEntity('add', 'company', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('add', 'company', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   add_company_pre_poll: function (bundle) {
     return Application.hooksPrePoll('add', 'company', bundle);
   },
   add_company_post_poll: function (bundle) {
-    return [Application.convertEntity('add', 'company', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('add', 'company', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   update_company_post_custom_trigger_fields: function (bundle) {
     return Application.prepareFieldsFromAccount('hook_update', 'company', bundle.response.content);
@@ -2059,13 +2059,13 @@ Zap = {
     return bundle.request;
   },
   update_company_catch_hook: function (bundle) {
-    return Application.convertEntity('update', 'company', bundle.request.content, bundle.auth_fields.account);
+    return Application.convertEntity('update', 'company', bundle.request.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain);
   },
   update_company_pre_poll: function (bundle) {
     return Application.hooksPrePoll('update', 'company', bundle);
   },
   update_company_post_poll: function (bundle) {
-    return [Application.convertEntity('update', 'company', bundle.response.content, bundle.auth_fields.account)];
+    return [Application.convertEntity('update', 'company', bundle.response.content, bundle.auth_fields.account, bundle.auth_fields.top_level_domain)];
   },
   delete_company_catch_hook: function (bundle) {
     return Application.delete_catch_hook('company', bundle);

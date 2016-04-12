@@ -161,6 +161,7 @@ describe('result/app', function () {
           test_result.should.has.property('url');
           top_level_domain = top_level_domain ? top_level_domain : 'com';
           test_result.url.should.contain('.' + top_level_domain + '/');
+          (test_result.url.match(new RegExp(top_level_domain, 'g')) || []).length.should.be.equal(1);
         });
       });
     });

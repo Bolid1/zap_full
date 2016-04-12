@@ -1,6 +1,7 @@
 {
   "bundle": {
     "auth_fields": {
+      "top_level_domain": "ru",
       "login": "v.vargin@team.amocrm.com",
       "api_key": "9292ec5cdb8d5d48bb307cd83c6a0d02",
       "account": "testzapier"
@@ -69,7 +70,7 @@
     }
   },
   "result": {
-    "url": "https://testzapier.amocrm.com/leads/detail/40365786",
+    "url": "https://testzapier.amocrm.ru/leads/detail/40365786",
     "subdomain": "testzapier",
     "id": 40365786
   }
