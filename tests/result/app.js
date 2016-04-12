@@ -119,7 +119,49 @@ describe('result/app', function () {
       it('Property "' + prop + '" must exist and be a function', function () {
         Zap.should.has.property(prop);
         Zap[prop].should.be.a('function');
-        console.log(Zap[prop]);
+      });
+      it('Property "' + prop + '" must return valid url', function () {
+        var
+          test_data_template = {
+            auth_fields: {
+              top_level_domain: 'ru',
+              login: 'v.vargin@team.amocrm.com',
+              api_key: '9292ec5cdb8d5d48bb307cd83c6a0d02',
+              account: 'testzapier'
+            },
+            request: {
+              files: {},
+              url: 'https://testzapier.amocrm.com/private/api/v2/json/contacts/set/',
+              auth: null,
+              headers: {
+                'Content-Type': 'application/json; charset=utf-8',
+                Accept: 'application/json'
+              },
+              params: {
+                USER_LOGIN: 'v.vargin@team.amocrm.com',
+                USER_HASH: '9292ec5cdb8d5d48bb307cd83c6a0d02'
+              },
+              allow_redirects: false,
+              data: '{\'request\':{\'contacts\':{\'add\':[{\'company_name\':\'Some company name\',\'responsible_user_id\':261002,\'custom_fields\':[{\'id\':\'1520849\',\'values\':[{\'value\':\'U02S377ES\'}]},{\'id\':\'1520851\',\'values\':[{\'value\':\'23528602727\',\'enum\':\'3636269\',\'subtype\':\'3636269\'},{\'value\':\'29845793846\',\'enum\':\'3636269\',\'subtype\':\'3636269\'},{\'value\':\'5657568\',\'enum\':\'3636271\',\'subtype\':\'3636271\'},{\'value\':\'i89567\',\'enum\':\'3636271\',\'subtype\':\'3636271\'},{\'value\':\'phone home\',\'enum\':\'3636277\',\'subtype\':\'3636277\'}]},{\'id\':\'1520853\',\'values\':[{\'value\':\'Some mail\',\'enum\':\'3636285\',\'subtype\':\'3636285\'}]}],\'name\':\'gfg\'}]}}}',
+              method: 'POST'
+            },
+            action_fields: {},
+            action_fields_full: {},
+            meta: {},
+            action_fields_raw: {},
+            response: {},
+            zap: {}
+          },
+          test_result;
+
+        ['ru', 'com', undefined].forEach(function (top_level_domain) {
+          var test_data = utils.objects.clone(test_data_template);
+          test_data.auth_fields.top_level_domain = top_level_domain;
+          test_result = Zap[prop](test_data);
+          test_result.should.has.property('url');
+          top_level_domain = top_level_domain ? top_level_domain : 'com';
+          test_result.url.should.contain('.' + top_level_domain + '/');
+        });
       });
     });
   });

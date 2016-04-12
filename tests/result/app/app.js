@@ -304,7 +304,7 @@ _.extend(URLParams.prototype, {
   },
 
   fixUrl: function (url, top_level_domain) {
-    return url.replace('.com', top_level_domain === 'ru' ? top_level_domain : 'com');
+    return url.replace('.com', '.' + (top_level_domain === 'ru' ? top_level_domain : 'com'));
   },
 
   buildUrl: function (subdomain, path) {
@@ -1334,6 +1334,12 @@ _.extend(Application.prototype, {
       search_fields = bundle.search_fields,
       avail_search_fields = _.keys(confSearches[type + '_search'].fields);
 
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+
+    if (!search_fields) {
+      return bundle.request;
+    }
+
     _.each(this.getBaseFields(type), function (field) {
       avail_search_fields.push(field.key);
     });
@@ -1419,6 +1425,8 @@ _.extend(Application.prototype, {
       request_data = {},
       base_fields;
 
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
+
     if (!data) {
       return bundle.request;
     }
@@ -1471,6 +1479,7 @@ _.extend(Application.prototype, {
     ];
 
     bundle.request.data = JSON.stringify(result);
+    bundle.request.url = URLParams.fixUrl(bundle.request.url, bundle.auth_fields.top_level_domain);
 
     return bundle.request;
   },
