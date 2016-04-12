@@ -41,7 +41,7 @@ describe('result/auth_fields', function () {
       },
       top_level_domain: {
         label: 'Top Level Domain',
-        required: true,
+        required: false,
         help_text: 'Select top level domain, which you use to work with amoCRM',
         placeholder: null,
         default: 'com',
