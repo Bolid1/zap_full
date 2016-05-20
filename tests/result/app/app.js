@@ -1411,8 +1411,17 @@ _.extend(Application.prototype, {
       }
     }
 
-    if (result.id && (type === 'contacts' || type === 'leads' || type === 'companies')) {
+    if (!result.id && bundle.action_fields) {
+      if (bundle.action_fields.id) {
+        result.id = bundle.action_fields.id;
+      }
+    }
+
+    if (result.id && ['contacts', 'leads', 'companies'].indexOf(type) > -1) {
       result.url = URLParams.buildUrl(bundle.auth_fields.account, type + '/detail/' + result.id, bundle.auth_fields.top_level_domain);
+    } else if (['notes', 'tasks'].indexOf(type) > -1 && bundle.action_fields.element_id) {
+      type = this.convertEntityName(bundle.action_fields.element_type, 'many');
+      result.url = URLParams.buildUrl(bundle.auth_fields.account, type + '/detail/' + bundle.action_fields.element_id, bundle.auth_fields.top_level_domain);
     }
 
     return result;
