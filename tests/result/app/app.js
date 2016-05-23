@@ -789,7 +789,7 @@ _.extend(CustomFields.prototype, {
         type: 'int',
         key: 'responsible_user_id',
         label: 'Unique identified of a responsible user',
-        choices: users ? users : undefined
+        choices: users ? users : null
       }
     ];
 
@@ -834,13 +834,13 @@ _.extend(CustomFields.prototype, {
           type: 'int',
           key: 'created_user_id',
           label: 'Unique identified of a user which has created this ' + entity_name_lowercase,
-          choices: users ? users : undefined
+          choices: users ? users : null
         },
         {
           type: 'int',
           key: 'modified_user_id',
           label: 'Unique identified of a user which has modified this ' + entity_name_lowercase,
-          choices: users ? users : undefined
+          choices: users ? users : null
         }
       ]);
 
@@ -881,7 +881,7 @@ _.extend(CustomFields.prototype, {
           type: 'int',
           key: 'old_responsible_user_id',
           label: 'Unique identified of a previous responsible user',
-          choices: users ? users : undefined
+          choices: users ? users : null
         });
       }
     }
@@ -905,7 +905,7 @@ _.extend(CustomFields.prototype, {
           type: 'int',
           key: 'status_id',
           label: 'Unique status identifier',
-          choices: statuses ? statuses : undefined,
+          choices: statuses ? statuses : null,
           required: is_action_add
         }
       ]);
@@ -943,7 +943,7 @@ _.extend(CustomFields.prototype, {
         type: 'int',
         key: 'responsible_user_id',
         label: 'Unique identified of a responsible user',
-        choices: users ? users : undefined
+        choices: users ? users : null
       }
     ];
 
@@ -985,7 +985,7 @@ _.extend(CustomFields.prototype, {
           type: 'int',
           key: 'created_user_id',
           label: 'Unique identified of a user which has created this ' + entity_name_lowercase,
-          choices: users ? users : undefined
+          choices: users ? users : null
         },
         {
           type: 'datetime',
@@ -1038,7 +1038,7 @@ _.extend(CustomFields.prototype, {
           type: 'int',
           key: entity_name_lowercase + '_type',
           label: entity_name + ' type',
-          choices: types ? types : undefined,
+          choices: types ? types : null,
           required: is_action_add
         }
       ]);
