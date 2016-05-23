@@ -168,7 +168,6 @@ describe('result/searches', function () {
               label: 'Query',
               required: false,
               help_text: 'Searched element, by a text query (Performs search in such fields as e-mail, phone and others; does not perform search in notes and tasks)',
-              placeholder: '%s name',
               default: null,
               choices: null,
               sort: null,
@@ -179,11 +178,6 @@ describe('result/searches', function () {
           });
         }
 
-        _.each(test_fields, function (field) {
-          if (field.placeholder) {
-            field.placeholder = field.placeholder.replace('%s', utils.string.capitalize(entity));
-          }
-        });
         props.fields.should.deep.equal(test_fields);
       });
 
