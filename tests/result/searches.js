@@ -128,7 +128,6 @@ describe('result/searches', function () {
             label: 'ID',
             required: false,
             help_text: 'Select an element with the specified ID (if this parameter is indicated, all other parameters will be ignored)',
-            placeholder: '123456',
             default: null,
             choices: null,
             sort: null,
@@ -144,7 +143,6 @@ describe('result/searches', function () {
               label: 'Element ID',
               required: false,
               help_text: 'Additional search filter option by lead/contact ID',
-              placeholder: '123456',
               default: null,
               choices: null,
               sort: null,
@@ -156,7 +154,6 @@ describe('result/searches', function () {
               label: 'Element Type',
               required: entity === 'note',
               help_text: 'Obtaining data only for contact or lead',
-              placeholder: '',
               default: null,
               choices: 'contact|Contact,lead|Lead',
               sort: null,
@@ -183,7 +180,9 @@ describe('result/searches', function () {
         }
 
         _.each(test_fields, function (field) {
-          field.placeholder = field.placeholder.replace('%s', utils.string.capitalize(entity));
+          if (field.placeholder) {
+            field.placeholder = field.placeholder.replace('%s', utils.string.capitalize(entity));
+          }
         });
         props.fields.should.deep.equal(test_fields);
       });
