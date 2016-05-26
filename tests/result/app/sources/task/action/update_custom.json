@@ -137,7 +137,7 @@
         "MEETING": "Meeting"
       },
       "required": false,
-      "type": "int",
+      "type": "text",
       "key": "task_type",
       "label": "Task type"
     }
