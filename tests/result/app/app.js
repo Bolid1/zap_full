@@ -27,7 +27,7 @@ var confSearches = {
         "choices": null,
         "sort": null,
         "type_of": "Integer",
-        "list": true,
+        "list": false,
         "prefill": null
       },
       "query": {
@@ -65,7 +65,7 @@ var confSearches = {
         "choices": null,
         "sort": null,
         "type_of": "Integer",
-        "list": true,
+        "list": false,
         "prefill": null
       },
       "query": {
@@ -103,7 +103,7 @@ var confSearches = {
         "choices": null,
         "sort": null,
         "type_of": "Integer",
-        "list": true,
+        "list": false,
         "prefill": null
       },
       "query": {
@@ -141,7 +141,7 @@ var confSearches = {
         "choices": null,
         "sort": null,
         "type_of": "Integer",
-        "list": true,
+        "list": false,
         "prefill": null
       },
       "element_id": {
@@ -190,7 +190,7 @@ var confSearches = {
         "choices": null,
         "sort": null,
         "type_of": "Integer",
-        "list": true,
+        "list": false,
         "prefill": null
       },
       "element_id": {

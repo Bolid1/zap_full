@@ -132,7 +132,7 @@ describe('result/searches', function () {
             choices: null,
             sort: null,
             type_of: 'Integer',
-            list: true,
+            list: false,
             prefill: null
           }
         };
