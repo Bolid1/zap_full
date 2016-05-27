@@ -127,7 +127,7 @@ describe('result/searches', function () {
           id: {
             label: 'ID',
             required: false,
-            help_text: 'Select an element with the specified ID (if this parameter is indicated, all other parameters will be ignored)',
+            help_text: 'Select an element with the specified ID',
             default: null,
             choices: null,
             sort: null,

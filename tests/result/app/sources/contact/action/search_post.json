@@ -1,0 +1,60 @@
+{
+  "bundle": {
+    "auth_fields": {
+      "top_level_domain": "com",
+      "login": "VDVUGaD@gmail.com",
+      "api_key": "d27df1e3cadd379f44adcd2aa7082209",
+      "account": "testbillingnewtour"
+    },
+    "request": {
+      "files": null,
+      "url": "https://testbillingnewtour.amocrm.com/private/api/v2/json/contacts/list/",
+      "auth": null,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Accept": "application/json"
+      },
+      "params": {
+        "USER_LOGIN": "VDVUGaD@gmail.com",
+        "USER_HASH": "d27df1e3cadd379f44adcd2aa7082209",
+        "id": "[u'53503933']"
+      },
+      "data": null,
+      "method": "GET"
+    },
+    "search_fields": {
+      "id": [
+        "53503933"
+      ]
+    },
+    "meta": {
+      "frontend": true
+    },
+    "response": {
+      "content": "",
+      "status_code": 204,
+      "headers": {
+        "Set-Cookie": "session_id=spm31b8vsvov1q2aaqikfldr2bdnap9tng07f4odm1j48ae25t11; path=/; domain=.amocrm.com, BITRIX_SM_LOGIN=VDVUGaD%40gmail.com; expires=Sat, 01-May-2021 12:20:06 GMT; path=/; domain=.amocrm.com, BITRIX_SM_SALE_UID=138773; expires=Mon, 22-May-2017 12:20:06 GMT; path=/; domain=.amocrm.com, user_lang=ru; expires=Thu, 27-May-2021 12:20:06 GMT; path=/; domain=.amocrm.com",
+        "Expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "Server": "nginx",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Date": "Fri, 27 May 2016 12:20:06 GMT",
+        "P3P": "policyref=\"/bitrix/p3p.xml\", CP=\"NON DSP COR CUR ADM DEV PSA PSD OUR UNR BUS UNI COM NAV INT DEM STA\"",
+        "Content-Type": "application/json; charset=\"utf-8\""
+      }
+    },
+    "zap": {
+      "live": false,
+      "link": "https://zapier.com/app/edit/9447097",
+      "name": "",
+      "user": {
+        "timezone": "UTC"
+      }
+    }
+  },
+  "result": [
+
+  ]
+}
