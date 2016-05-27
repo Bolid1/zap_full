@@ -1,0 +1,56 @@
+{
+  "bundle": {
+    "auth_fields": {
+      "top_level_domain": "com",
+      "login": "VDVUGaD@gmail.com",
+      "api_key": "d27df1e3cadd379f44adcd2aa7082209",
+      "account": "testbillingnewtour"
+    },
+    "request": {
+      "files": null,
+      "url": "https://testbillingnewtour.amocrm.com/private/api/v2/json/contacts/list/",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Accept": "application/json"
+      },
+      "params": {
+        "USER_LOGIN": "VDVUGaD@gmail.com",
+        "USER_HASH": "d27df1e3cadd379f44adcd2aa7082209"
+      },
+      "data": null,
+      "method": "GET"
+    },
+    "search_fields": {
+      "id": [
+        "53503933"
+      ]
+    },
+    "meta": {
+      "frontend": true
+    },
+    "url_raw": "https://{{account}}.amocrm.com/private/api/v2/json/contacts/list/",
+    "zap": {
+      "live": false,
+      "link": "https://zapier.com/app/edit/9447097",
+      "name": "",
+      "user": {
+        "timezone": "UTC"
+      }
+    }
+  },
+  "result": {
+    "files": null,
+    "url": "https://testbillingnewtour.amocrm.com/private/api/v2/json/contacts/list/",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Accept": "application/json"
+    },
+    "params": {
+      "USER_LOGIN": "VDVUGaD@gmail.com",
+      "USER_HASH": "d27df1e3cadd379f44adcd2aa7082209",
+      "id": "53503933"
+    },
+    "data": null,
+    "method": "GET"
+  }
+}
