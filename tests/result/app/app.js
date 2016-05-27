@@ -1197,7 +1197,7 @@ _.extend(CustomFields.prototype, {
     _.each(custom_fields, function (custom_field, cf_id) {
       var values = [];
 
-      if (_.isObject(custom_field)) {
+      if (_.isObject(custom_field) && !_.isArray(custom_field)) {
         _.each(custom_field, function (enum_value, enum_id) {
           if (!_.isArray(enum_value)) {
             enum_value = [enum_value];
@@ -1211,9 +1211,11 @@ _.extend(CustomFields.prototype, {
             });
           });
         });
+      } else if (_.isArray(custom_field)) {
+        values = custom_field;
       } else {
         values.push({
-          value: _.isArray(custom_field) ? custom_field.join(', ') : custom_field
+          value: custom_field
         });
       }
 
