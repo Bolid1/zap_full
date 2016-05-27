@@ -1,98 +1,150 @@
 {
   "bundle": {
     "auth_fields": {
-      "login": "v.vargin@team.amocrm.com",
-      "api_key": "9292ec5cdb8d5d48bb307cd83c6a0d02",
-      "account": "testzapier"
+      "top_level_domain": "com",
+      "login": "VDVUGaD@gmail.com",
+      "api_key": "d27df1e3cadd379f44adcd2aa7082209",
+      "account": "testbillingnewtour"
     },
     "request": {
       "files": {},
-      "url": "https://testzapier.amocrm.com/private/api/v2/json/contacts/set/",
+      "url": "https://testbillingnewtour.amocrm.com/private/api/v2/json/contacts/set/",
       "headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Accept": "application/json"
       },
       "params": {
-        "USER_LOGIN": "v.vargin@team.amocrm.com",
-        "USER_HASH": "9292ec5cdb8d5d48bb307cd83c6a0d02"
+        "USER_LOGIN": "VDVUGaD@gmail.com",
+        "USER_HASH": "d27df1e3cadd379f44adcd2aa7082209"
       },
-      "data": "{\"company_name\": \"Some company name\", \"responsible_user_id\": 261002, \"custom_fields\": {\"1520851\": {\"3636271\": [\"5657568\", \"i89567\"], \"3636269\": [\"23528602727\", \"29845793846\"], \"3636277\": [\"phone home\"]}, \"1520849\": \"U02S377ES\", \"1520853\": {\"3636285\": [\"Some mail\"]}}, \"name\": \"gfg\"}",
+      "data": "{\"date_create\": \"2016-05-24T09:13:08+00:00\", \"name\": \"olga_postnikova\", \"company_name\": \"test_zapier\", \"custom_fields\": {\"1546635\": \"Manager\", \"1546637\": {\"3696045\": [\"32135\"], \"3696047\": [\"5464564\"], \"3696041\": [\"325435\"], \"3696043\": [\"215332\"], \"3696039\": [\"23535435\"], \"3696037\": [\"840583904853\"]}, \"1546639\": {\"3696051\": [\"oripe@dg.ru\"], \"3696049\": [\"5464564\"]}, \"1550437\": [3704769, 3704767], \"1547195\": \"link\", \"1547193\": \"no\"}, \"responsible_user_id\": 773176}",
       "method": "POST"
     },
     "action_fields": {
-      "name": "gfg",
-      "company_name": "Some company name",
+      "date_create": "datetime-2016-05-24T09:13:08+00:00",
+      "responsible_user_id": 773176,
+      "name": "olga_postnikova",
       "custom_fields": {
-        "1520851": {
-          "3636271": [
-            "5657568",
-            "i89567"
+        "1546635": "Manager",
+        "1546637": {
+          "3696045": [
+            "32135"
           ],
-          "3636269": [
-            "23528602727",
-            "29845793846"
+          "3696047": [
+            "5464564"
           ],
-          "3636277": [
-            "phone home"
+          "3696041": [
+            "325435"
+          ],
+          "3696043": [
+            "215332"
+          ],
+          "3696039": [
+            "23535435"
+          ],
+          "3696037": [
+            "840583904853"
           ]
         },
-        "1520849": "U02S377ES",
-        "1520853": {
-          "3636285": [
-            "Some mail"
+        "1546639": {
+          "3696051": [
+            "oripe@dg.ru"
+          ],
+          "3696049": [
+            "5464564"
           ]
-        }
+        },
+        "1550437": [
+          3704769,
+          3704767
+        ],
+        "1547195": "link",
+        "1547193": "no"
       },
-      "responsible_user_id": 261002
+      "company_name": "test_zapier"
     },
     "action_fields_full": {
-      "custom_fields__1520851__3636271": [
-        "5657568",
-        "i89567"
+      "name": "olga_postnikova",
+      "custom_fields__1546637__3696043": [
+        "215332"
       ],
-      "name": "gfg",
-      "custom_fields__1520851__3636277": [
-        "phone home"
+      "custom_fields__1547195": "link",
+      "custom_fields__1546635": "Manager",
+      "custom_fields__1550437": [
+        3704769,
+        3704767
       ],
-      "custom_fields__1520849": "U02S377ES",
-      "company_name": "Some company name",
-      "custom_fields__1520851__3636269": [
-        "23528602727",
-        "29845793846"
+      "custom_fields__1547193": "no",
+      "date_create": "datetime-2016-05-24T09:13:08+00:00",
+      "custom_fields__1546637__3696047": [
+        "5464564"
       ],
-      "custom_fields__1520853__3636285": [
-        "Some mail"
+      "company_name": "test_zapier",
+      "custom_fields__1546637__3696045": [
+        "32135"
       ],
-      "responsible_user_id": 261002
+      "custom_fields__1546637__3696037": [
+        "840583904853"
+      ],
+      "custom_fields__1546639__3696049": [
+        "5464564"
+      ],
+      "custom_fields__1546637__3696041": [
+        "325435"
+      ],
+      "custom_fields__1546637__3696039": [
+        "23535435"
+      ],
+      "custom_fields__1546639__3696051": [
+        "oripe@dg.ru"
+      ],
+      "responsible_user_id": 773176
     },
     "meta": {
       "frontend": true
     },
     "action_fields_raw": {
-      "custom_fields__1520851__3636271": [
-        "5657568",
-        "i89567"
+      "custom_fields__1546639__3696049": [
+        "5464564"
       ],
-      "name": "{{7556965__text}}",
-      "custom_fields__1520851__3636277": [
-        "phone home"
+      "name": "{{9361323__user_name}}",
+      "custom_fields__1547195": "link",
+      "custom_fields__1546635": "Manager",
+      "custom_fields__1550437": [
+        "3704769",
+        "3704767"
       ],
-      "custom_fields__1520849": "{{7556965__user_id}}",
-      "company_name": "Some company name",
-      "custom_fields__1520851__3636269": [
-        "{{7556965__service_id}}",
-        "29845793846"
+      "custom_fields__1547193": "no",
+      "date_create": "{{9361323__timestamp}}",
+      "custom_fields__1546637__3696047": [
+        "5464564"
       ],
-      "custom_fields__1520853__3636285": [
-        "Some mail"
+      "responsible_user_id": "773176",
+      "custom_fields__1546637__3696045": [
+        "32135"
       ],
-      "responsible_user_id": "261002"
+      "custom_fields__1546637__3696037": [
+        "840583904853"
+      ],
+      "custom_fields__1546637__3696043": [
+        "215332"
+      ],
+      "custom_fields__1546637__3696041": [
+        "325435"
+      ],
+      "custom_fields__1546637__3696039": [
+        "23535435"
+      ],
+      "custom_fields__1546639__3696051": [
+        "oripe@dg.ru"
+      ],
+      "company_name": "{{9361323__channel_name}}"
     },
     "url_raw": "https://{{account}}.amocrm.com/private/api/v2/json/contacts/set/",
     "zap": {
       "live": false,
-      "link": "https://zapier.com/app/edit/7556965",
-      "name": "Create Contact",
+      "link": "https://zapier.com/app/edit/9361323",
+      "name": "Create contact",
       "user": {
         "timezone": "UTC"
       }
@@ -100,16 +152,112 @@
   },
   "result": {
     "files": {},
-    "url": "https://testzapier.amocrm.com/private/api/v2/json/contacts/set/",
+    "url": "https://testbillingnewtour.amocrm.com/private/api/v2/json/contacts/set/",
     "headers": {
       "Content-Type": "application/json; charset=utf-8",
       "Accept": "application/json"
     },
     "params": {
-      "USER_LOGIN": "v.vargin@team.amocrm.com",
-      "USER_HASH": "9292ec5cdb8d5d48bb307cd83c6a0d02"
+      "USER_LOGIN": "VDVUGaD@gmail.com",
+      "USER_HASH": "d27df1e3cadd379f44adcd2aa7082209"
     },
-    "data": "{\"request\":{\"contacts\":{\"add\":[{\"company_name\":\"Some company name\",\"responsible_user_id\":261002,\"custom_fields\":[{\"id\":\"1520849\",\"values\":[{\"value\":\"U02S377ES\"}]},{\"id\":\"1520851\",\"values\":[{\"value\":\"23528602727\",\"enum\":\"3636269\",\"subtype\":\"3636269\"},{\"value\":\"29845793846\",\"enum\":\"3636269\",\"subtype\":\"3636269\"},{\"value\":\"5657568\",\"enum\":\"3636271\",\"subtype\":\"3636271\"},{\"value\":\"i89567\",\"enum\":\"3636271\",\"subtype\":\"3636271\"},{\"value\":\"phone home\",\"enum\":\"3636277\",\"subtype\":\"3636277\"}]},{\"id\":\"1520853\",\"values\":[{\"value\":\"Some mail\",\"enum\":\"3636285\",\"subtype\":\"3636285\"}]}],\"name\":\"gfg\"}]}}}",
+    "data": {
+      "request": {
+        "contacts": {
+          "add": [
+            {
+              "date_create": "1464081188",
+              "name": "olga_postnikova",
+              "company_name": "test_zapier",
+              "custom_fields": [
+                {
+                  "id": "1546635",
+                  "values": [
+                    {
+                      "value": "Manager"
+                    }
+                  ]
+                },
+                {
+                  "id": "1546637",
+                  "values": [
+                    {
+                      "value": "840583904853",
+                      "enum": "3696037",
+                      "subtype": "3696037"
+                    },
+                    {
+                      "value": "23535435",
+                      "enum": "3696039",
+                      "subtype": "3696039"
+                    },
+                    {
+                      "value": "325435",
+                      "enum": "3696041",
+                      "subtype": "3696041"
+                    },
+                    {
+                      "value": "215332",
+                      "enum": "3696043",
+                      "subtype": "3696043"
+                    },
+                    {
+                      "value": "32135",
+                      "enum": "3696045",
+                      "subtype": "3696045"
+                    },
+                    {
+                      "value": "5464564",
+                      "enum": "3696047",
+                      "subtype": "3696047"
+                    }
+                  ]
+                },
+                {
+                  "id": "1546639",
+                  "values": [
+                    {
+                      "value": "5464564",
+                      "enum": "3696049",
+                      "subtype": "3696049"
+                    },
+                    {
+                      "value": "oripe@dg.ru",
+                      "enum": "3696051",
+                      "subtype": "3696051"
+                    }
+                  ]
+                },
+                {
+                  "id": "1547193",
+                  "values": [
+                    {
+                      "value": "no"
+                    }
+                  ]
+                },
+                {
+                  "id": "1547195",
+                  "values": [
+                    {
+                      "value": "link"
+                    }
+                  ]
+                },
+                {
+                  "id": "1550437",
+                  "values": [
+                    3704769,
+                    3704767
+                  ]
+                }
+              ],
+              "responsible_user_id": 773176
+            }
+          ]
+        }
+      }
+    },
     "method": "POST"
   }
 }
