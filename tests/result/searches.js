@@ -123,19 +123,7 @@ describe('result/searches', function () {
       });
 
       it('Check fields', function () {
-        var test_fields = {
-          id: {
-            label: 'ID',
-            required: false,
-            help_text: 'Select an element with the specified ID',
-            default: null,
-            choices: null,
-            sort: null,
-            type_of: 'Integer',
-            list: false,
-            prefill: null
-          }
-        };
+        var test_fields = {};
 
         if (_.indexOf(['note', 'task'], entity) !== -1) {
           test_fields = _.extend(test_fields, {

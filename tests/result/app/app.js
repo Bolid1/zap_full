@@ -19,17 +19,6 @@ var confSearches = {
     "action_pair_key": "contact_add",
     "sample_result_fields": [],
     "fields": {
-      "id": {
-        "label": "ID",
-        "required": false,
-        "help_text": "Select an element with the specified ID",
-        "default": null,
-        "choices": null,
-        "sort": null,
-        "type_of": "Integer",
-        "list": false,
-        "prefill": null
-      },
       "query": {
         "label": "Query",
         "required": false,
@@ -57,17 +46,6 @@ var confSearches = {
     "action_pair_key": "lead_add",
     "sample_result_fields": [],
     "fields": {
-      "id": {
-        "label": "ID",
-        "required": false,
-        "help_text": "Select an element with the specified ID",
-        "default": null,
-        "choices": null,
-        "sort": null,
-        "type_of": "Integer",
-        "list": false,
-        "prefill": null
-      },
       "query": {
         "label": "Query",
         "required": false,
@@ -95,17 +73,6 @@ var confSearches = {
     "action_pair_key": "company_add",
     "sample_result_fields": [],
     "fields": {
-      "id": {
-        "label": "ID",
-        "required": false,
-        "help_text": "Select an element with the specified ID",
-        "default": null,
-        "choices": null,
-        "sort": null,
-        "type_of": "Integer",
-        "list": false,
-        "prefill": null
-      },
       "query": {
         "label": "Query",
         "required": false,
@@ -133,17 +100,6 @@ var confSearches = {
     "action_pair_key": "task_add",
     "sample_result_fields": [],
     "fields": {
-      "id": {
-        "label": "ID",
-        "required": false,
-        "help_text": "Select an element with the specified ID",
-        "default": null,
-        "choices": null,
-        "sort": null,
-        "type_of": "Integer",
-        "list": false,
-        "prefill": null
-      },
       "element_id": {
         "label": "Element ID",
         "required": false,
@@ -182,17 +138,6 @@ var confSearches = {
     "action_pair_key": "note_add",
     "sample_result_fields": [],
     "fields": {
-      "id": {
-        "label": "ID",
-        "required": false,
-        "help_text": "Select an element with the specified ID",
-        "default": null,
-        "choices": null,
-        "sort": null,
-        "type_of": "Integer",
-        "list": false,
-        "prefill": null
-      },
       "element_id": {
         "label": "Element ID",
         "required": false,
