@@ -23,36 +23,35 @@
       "method": "GET"
     },
     "action_fields": {
-      "complete_till": "08/10/2016",
-      "task_type": "3",
-      "responsible_user_id": "261002",
-      "text": "make payment",
-      "date_create": "1460106818.000028",
+      "complete_till": "12 july ",
+      "task_type": "MEETING",
+      "responsible_user_id": "773176",
+      "text": "{{9364940__text}}",
+      "date_create": "{{9364940__timestamp}}",
       "element_type": "2",
-      "element_id": "40647673",
-      "id": "24511553"
+      "element_id": "40652541"
     },
     "response": {
-      "content": "{\"response\":{\"account\":{\"id\":\"10925467\",\"name\":\"test billing new tour\",\"subdomain\":\"testbillingnewtour\",\"currency\":\"USD\",\"paid_from\":false,\"paid_till\":false,\"timezone\":\"America\\/New_York\",\"language\":\"en\",\"date_pattern\":\"M j, Y g:i A\",\"date_format\":\"M j, Y\",\"time_format\":\"g:i:s A\",\"country\":\"us\",\"unsorted_on\":true,\"limits\":{\"users_count\":false,\"contacts_count\":false,\"active_deals_count\":false},\"users\":[{\"id\":\"193264\",\"mail_admin\":\"A\",\"name\":\"\\u0412\\u0430\\u043b\\u0435\\u0440\\u0438\\u0439 \\u0412\\u0430\\u0440\\u0433\\u0438\\u043d\",\"last_name\":null,\"login\":\"VDVUGaD@gmail.com\",\"photo_url\":\"\\/upload\\/main\\/331\\/vnivsuphjg.jpg\",\"phone_number\":\"123564\",\"language\":\"en\",\"group_id\":0,\"rights_lead_add\":\"A\",\"rights_lead_view\":\"A\",\"rights_lead_edit\":\"A\",\"rights_lead_delete\":\"A\",\"rights_lead_export\":\"A\",\"rights_contact_add\":\"A\",\"rights_contact_view\":\"A\",\"rights_contact_edit\":\"A\",\"rights_contact_delete\":\"A\",\"rights_contact_export\":\"A\",\"rights_company_add\":\"A\",\"rights_company_view\":\"A\",\"rights_company_edit\":\"A...",
+      "content": "{\"response\":{\"account\":{\"id\":\"10925467\",\"name\":\"test billing new tour\",\"subdomain\":\"testbillingnewtour\",\"currency\":\"USD\",\"paid_from\":false,\"paid_till\":false,\"timezone\":\"Europe\\/Moscow\",\"language\":\"en\",\"date_pattern\":\"M j, Y g:i A\",\"date_format\":\"M j, Y\",\"time_format\":\"g:i:s A\",\"country\":\"us\",\"unsorted_on\":true,\"limits\":{\"users_count\":false,\"contacts_count\":false,\"active_deals_count\":false},\"users\":[{\"id\":\"773176\",\"mail_admin\":\"A\",\"name\":\"Lucy\",\"last_name\":null,\"login\":\"opostnikova@team.amocrm.com\",\"photo_url\":null,\"phone_number\":\"\",\"language\":\"en\",\"group_id\":0,\"rights_lead_add\":\"A\",\"rights_lead_view\":\"A\",\"rights_lead_edit\":\"A\",\"rights_lead_delete\":\"A\",\"rights_lead_export\":\"A\",\"rights_contact_add\":\"A\",\"rights_contact_view\":\"A\",\"rights_contact_edit\":\"A\",\"rights_contact_delete\":\"A\",\"rights_contact_export\":\"A\",\"rights_company_add\":\"A\",\"rights_company_view\":\"A\",\"rights_company_edit\":\"A\",\"rights_company_delete\":\"A\",\"rights_company_export\":\"A\",\"unsorted_access\":\"Y\",\"is_admin\":\"Y\"},{\"id\":\"1932...",
       "status_code": 200,
       "headers": {
-        "content-encoding": "gzip",
-        "transfer-encoding": "chunked",
-        "set-cookie": "session_id=02osv8ba8p53447lq3p65rotj94629lud1rgdquqc405kc7c4r11; path=/; domain=.amocrm.com, BITRIX_SM_LOGIN=VDVUGaD%40gmail.com; expires=Sat, 24-Apr-2021 08:11:35 GMT; path=/; domain=.amocrm.com, BITRIX_SM_SALE_UID=138773; expires=Mon, 15-May-2017 08:11:35 GMT; path=/; domain=.amocrm.com, user_lang=en; expires=Thu, 20-May-2021 08:11:35 GMT; path=/; domain=.amocrm.com",
-        "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
-        "server": "nginx",
-        "connection": "keep-alive",
-        "pragma": "no-cache",
-        "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
-        "date": "Fri, 20 May 2016 08:11:35 GMT",
-        "p3p": "policyref=\"/bitrix/p3p.xml\", CP=\"NON DSP COR CUR ADM DEV PSA PSD OUR UNR BUS UNI COM NAV INT DEM STA\"",
-        "content-type": "application/json; charset=\"utf-8\""
+        "Content-Encoding": "gzip",
+        "Transfer-Encoding": "chunked",
+        "Set-Cookie": "session_id=etmmfg19acnp15lchev75rsda3s869vtkpdkqci6494int398or0; path=/; domain=.amocrm.com, BITRIX_SM_LOGIN=VDVUGaD%40gmail.com; expires=Wed, 05-May-2021 08:48:20 GMT; path=/; domain=.amocrm.com, BITRIX_SM_SALE_UID=138773; expires=Fri, 26-May-2017 08:48:20 GMT; path=/; domain=.amocrm.com, user_lang=ru; expires=Mon, 31-May-2021 08:48:20 GMT; path=/; domain=.amocrm.com",
+        "Expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "Server": "nginx",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Date": "Tue, 31 May 2016 08:48:21 GMT",
+        "P3P": "policyref=\"/bitrix/p3p.xml\", CP=\"NON DSP COR CUR ADM DEV PSA PSD OUR UNR BUS UNI COM NAV INT DEM STA\"",
+        "Content-Type": "application/json; charset=\"utf-8\""
       }
     },
     "zap": {
       "live": false,
-      "link": "https://zapier.com/app/edit/8374741",
-      "name": "Update task Contact",
+      "link": "https://zapier.com/app/edit/9364940",
+      "name": "Create task",
       "user": {
         "timezone": "UTC"
       }
@@ -106,18 +105,12 @@
     },
     {
       "required": true,
-      "type": "int",
-      "key": "id",
-      "label": "Unique task identifier"
-    },
-    {
-      "required": true,
       "type": "text",
       "key": "text",
       "label": "Text of task"
     },
     {
-      "required": false,
+      "required": true,
       "type": "datetime",
       "key": "complete_till",
       "label": "A date by which the task must be completed. If time has value 23:59, then \"All day\" will be displayed in system interfaces instead of time."
@@ -134,7 +127,7 @@
         "FOLLOW_UP": "Follow-up",
         "MEETING": "Meeting"
       },
-      "required": false,
+      "required": true,
       "type": "text",
       "key": "task_type",
       "label": "Task type"
