@@ -131,9 +131,7 @@
         "185843": "card",
         "185846": "dash",
         "187260": "new from card",
-        "CALL": "Call",
         "FOLLOW_UP": "Follow-up",
-        "LETTER": "Letter",
         "MEETING": "Meeting"
       },
       "required": false,

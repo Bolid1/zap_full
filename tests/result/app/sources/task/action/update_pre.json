@@ -22,7 +22,7 @@
     },
     "action_fields": {
       "complete_till": "datetime-2016-08-10T00:00:00+00:00",
-      "task_type": "LETTER",
+      "task_type": "MEETING",
       "responsible_user_id": 261002,
       "text": "make payment",
       "date_create": "datetime-2016-04-08T09:13:38+00:00",
@@ -32,7 +32,7 @@
     },
     "action_fields_full": {
       "complete_till": "datetime-2016-08-10T00:00:00+00:00",
-      "task_type": "LETTER",
+      "task_type": "MEETING",
       "responsible_user_id": 261002,
       "text": "make payment",
       "date_create": "datetime-2016-04-08T09:13:38+00:00",
@@ -45,7 +45,7 @@
     },
     "action_fields_raw": {
       "complete_till": "08/10/2016",
-      "task_type": "LETTER",
+      "task_type": "MEETING",
       "responsible_user_id": "261002",
       "text": "make payment",
       "date_create": "{{8374741__timestamp}}",
@@ -74,7 +74,7 @@
       "USER_LOGIN": "VDVUGaD@gmail.com",
       "USER_HASH": "d27df1e3cadd379f44adcd2aa7082209"
     },
-    "data": "{\"request\":{\"tasks\":{\"update\":[{\"responsible_user_id\":261002,\"date_create\":\"1460106818\",\"element_id\":40647673,\"element_type\":2,\"id\":24511553,\"text\":\"make payment\",\"complete_till\":\"1470787200\",\"task_type\":\"LETTER\",\"last_modified\":\"1463731896\"}]}}}",
+    "data": "{\"request\":{\"tasks\":{\"update\":[{\"responsible_user_id\":261002,\"date_create\":\"1460106818\",\"element_id\":40647673,\"element_type\":2,\"id\":24511553,\"text\":\"make payment\",\"complete_till\":\"1470787200\",\"task_type\":\"MEETING\",\"last_modified\":\"1463731896\"}]}}}",
     "method": "POST"
   }
 }
