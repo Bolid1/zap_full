@@ -30,7 +30,8 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    }
+    },
+    "placeholder": null
   },
   "lead_search": {
     "_dump_version": 1,
@@ -57,7 +58,8 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    }
+    },
+    "placeholder": null
   },
   "company_search": {
     "_dump_version": 1,
@@ -84,7 +86,8 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    }
+    },
+    "placeholder": null
   },
   "task_search": {
     "_dump_version": 1,
@@ -122,7 +125,8 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    }
+    },
+    "placeholder": null
   },
   "note_search": {
     "_dump_version": 1,
@@ -160,7 +164,8 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    }
+    },
+    "placeholder": null
   }
 };
 
