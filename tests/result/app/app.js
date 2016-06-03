@@ -21,6 +21,7 @@ var confSearches = {
     "fields": {
       "query": {
         "label": "Query",
+        "placeholder": null,
         "required": false,
         "help_text": "Searched element, by a text query (Performs search in such fields as e-mail, phone and others; does not perform search in notes and tasks)",
         "default": null,
@@ -30,8 +31,7 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    },
-    "placeholder": null
+    }
   },
   "lead_search": {
     "_dump_version": 1,
@@ -49,6 +49,7 @@ var confSearches = {
     "fields": {
       "query": {
         "label": "Query",
+        "placeholder": null,
         "required": false,
         "help_text": "Searched element, by a text query (Performs search in such fields as e-mail, phone and others; does not perform search in notes and tasks)",
         "default": null,
@@ -58,8 +59,7 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    },
-    "placeholder": null
+    }
   },
   "company_search": {
     "_dump_version": 1,
@@ -77,6 +77,7 @@ var confSearches = {
     "fields": {
       "query": {
         "label": "Query",
+        "placeholder": null,
         "required": false,
         "help_text": "Searched element, by a text query (Performs search in such fields as e-mail, phone and others; does not perform search in notes and tasks)",
         "default": null,
@@ -86,8 +87,7 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    },
-    "placeholder": null
+    }
   },
   "task_search": {
     "_dump_version": 1,
@@ -105,6 +105,7 @@ var confSearches = {
     "fields": {
       "element_id": {
         "label": "Element ID",
+        "placeholder": null,
         "required": false,
         "help_text": "Additional search filter option by lead/contact ID",
         "default": null,
@@ -116,6 +117,7 @@ var confSearches = {
       },
       "type": {
         "label": "Element Type",
+        "placeholder": null,
         "required": false,
         "help_text": "Obtaining data only for contact or lead",
         "default": null,
@@ -125,8 +127,7 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    },
-    "placeholder": null
+    }
   },
   "note_search": {
     "_dump_version": 1,
@@ -144,6 +145,7 @@ var confSearches = {
     "fields": {
       "element_id": {
         "label": "Element ID",
+        "placeholder": null,
         "required": false,
         "help_text": "Additional search filter option by lead/contact ID",
         "default": null,
@@ -155,6 +157,7 @@ var confSearches = {
       },
       "type": {
         "label": "Element Type",
+        "placeholder": null,
         "required": true,
         "help_text": "Obtaining data only for contact or lead",
         "default": null,
@@ -164,8 +167,7 @@ var confSearches = {
         "list": false,
         "prefill": null
       }
-    },
-    "placeholder": null
+    }
   }
 };
 

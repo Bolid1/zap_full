@@ -129,6 +129,7 @@ describe('result/searches', function () {
           test_fields = _.extend(test_fields, {
             element_id: {
               label: 'Element ID',
+              placeholder: null,
               required: false,
               help_text: 'Additional search filter option by lead/contact ID',
               default: null,
@@ -140,6 +141,7 @@ describe('result/searches', function () {
             },
             type: {
               label: 'Element Type',
+              placeholder: null,
               required: entity === 'note',
               help_text: 'Obtaining data only for contact or lead',
               default: null,
@@ -154,6 +156,7 @@ describe('result/searches', function () {
           test_fields = _.extend(test_fields, {
             query: {
               label: 'Query',
+              placeholder: null,
               required: false,
               help_text: 'Searched element, by a text query (Performs search in such fields as e-mail, phone and others; does not perform search in notes and tasks)',
               default: null,
